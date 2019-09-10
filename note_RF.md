@@ -5,7 +5,7 @@
 ### Rectanguler Waveguide
 
 <https://www.everythingrf.com/tech-resources/waveguides-sizes>
-![waveguide](../pic/waveguide.jpg)
+![waveguide](./waveguide.jpg)
 
 | EIA | Band [GHz] | Cutoff Low | Cutoff Next | A x B [mm]      |
 |-----|------------|------------|-------------|-----------------|
