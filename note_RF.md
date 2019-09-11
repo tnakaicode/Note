@@ -62,6 +62,4 @@
   - $$ b = \frac{20 \log_{10}((1+\cos\theta)/2) - A}{20k(1-\sin\theta)\log_{10}e} $$
   - $$ A = 20 \log_{10}((1+\cos\theta)/2) - 20bk(1-\sin\theta)\log_{10}e$$
 
-### Gaussian
-
-[ref1]: file:://RF-HDLXR-1/rfshare/nakai/GRASP/Manual/TicraTools-19.0/Documentation/TICRA-TOOLS-19.0.0-Manual.pdf
+### Gaussian Optics
