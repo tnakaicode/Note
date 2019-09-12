@@ -1,5 +1,14 @@
 # RF
 
+Frequency
+| Freq   | second [sec]   | second [ms] | second [micro sec] |
+|--------|----------------|-------------|--------------------|
+| 1 Hz   | 1.0 sec        | -           | -                  |
+| 2 Hz   | 0.5 sec        | -           | -                  |
+| 1 kHz  | 1 / 1000 sec   | -           | -                  |
+| 5 kHz  | 1 / 5000 sec   | 0.2 ms      | 200 micro sec      |
+| 10 kHz | 1 / 10,000 sec | 0.1 ms      | 100 micro sec      |
+
 ## Waveguide
 
 ### Rectanguler Waveguide
