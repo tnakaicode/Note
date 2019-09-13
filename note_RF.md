@@ -1,13 +1,31 @@
 # RF
 
 Frequency
-| Freq   | second [sec]   | second [ms] | second [micro sec] |
-|--------|----------------|-------------|--------------------|
-| 1 Hz   | 1.0 sec        | -           | -                  |
-| 2 Hz   | 0.5 sec        | -           | -                  |
-| 1 kHz  | 1 / 1000 sec   | -           | -                  |
-| 5 kHz  | 1 / 5000 sec   | 0.2 ms      | 200 micro sec      |
-| 10 kHz | 1 / 10,000 sec | 0.1 ms      | 100 micro sec      |
+| Freq    | second [sec]   | second [ms] | second [us] | second [ns] |
+| ------- | -------------- | ----------- | ----------- | ----------- |
+| 1 Hz    | 1.0 sec        | -           | -           |
+| 2 Hz    | 0.5 sec        | -           | -           |
+| 1 kHz   | 1 / 1000 sec   | -           | -           |
+| 5 kHz   | 1 / 5000 sec   | 0.2 ms      | 200 us      |
+| 10 kHz  | 1 / 10,000 sec | 0.1 ms      | 100 us      |
+| 30 kHz  | 1 / 30,000 sec | 0.03 ms     | 33 us       |
+| 1 MHz   | 1 / 10^6 sec   | 1 / 1000 ms | 1 us        |
+| 1 GHz   | 1 / 10^9 sec   | 1 / 10^6 ms | 0.001 us    | 1 ns        |
+| 100 GHz | 1 / 10^11 sec  | 1 / 10^8 ms | -           | 0.01 ns     |
+
+Frequency Wavelength Time
+| Freq    | Wave         | Time     |
+| ------- | ------------ | -------- |
+| 1 Hz    | 299,792.5 km | 1.0 sec  |
+| 2 Hz    | 149,896.2 km | 0.5 sec  |
+| 1 kHz   | 299.792 km   | 0.1 sec  |
+| 5 kHz   | 59.958 km    | 0.2 ms   |
+| 10 kHz  | 29.979 km    | 0.1 ms   |
+| 30 kHz  | 9.993 km     | 33 us    |
+| 1 MHz   | 299.792 m    | 1 us     |
+| 1 GHz   | 299.792 mm   | 0.001 us |
+| 100 GHz | 2.998 mm     | 0.01 ns  |
+| 200 GHz | 1.499 mm     | 0.005 ns |
 
 ## Waveguide
 
@@ -17,7 +35,7 @@ Frequency
 ![waveguide](./waveguide.jpg)
 
 | EIA | Band [GHz] | Cutoff Low | Cutoff Next | A x B [mm]      |
-|-----|------------|------------|-------------|-----------------|
+| --- | ---------- | ---------- | ----------- | --------------- |
 | WR5 | 140 ~ 220  | 115.714    | 231.429     | 1.2954 x 0.6477 |
 | WR6 | 110 ~ 170  | 90.791     | 181.583     | 1.651 x 0.8255  |
 | WR7 | 110 ~ 170  | 90.791     | 181.583     | 1.651 x 0.8255  |
