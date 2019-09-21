@@ -19,6 +19,11 @@
 * [PythonOCC](https://github.com/tpaviot/pythonocc-core.git)
 * [PythonOCC-Utils](https://github.com/tpaviot/pythonocc-utils.git)
 * [PythonOCC-DEMO](https://github.com/tpaviot/pythonocc-demos.git)
+* OpenGL
+  * freeglut3-dev
+  * liboce-visualization11
+  * opengl-4-man-doc
+* conda install -c conda-forge -c dlr-sc -c pythonocc -c oce pythonocc-core smesh
 
 ### Build Error
 
