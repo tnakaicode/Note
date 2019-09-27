@@ -9,4 +9,9 @@ git submodule add https://develop.openfoam.com/Development/ThirdParty-plus.git T
 git submodule update -i
 ```
 
+``` build
+source etc/bashrc
+./Allwmake
+```
+
 ## MHD (EHD)
