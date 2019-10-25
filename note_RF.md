@@ -90,3 +90,11 @@ Frequency Wavelength Time
   - $$ A = 20 \log_{10}((1+\cos\theta)/2) - 20bk(1-\sin\theta)\log_{10}e$$
 
 ### Gaussian Optics
+
+## MoM
+
+- The integral equation used for PEC objects is known
+  - as the Mixed-Potential Electric Field Integral Equation (EFIE) formulation.
+  - $$ \hat{n} \times E^{i} = \hat{n} \times L_{0} J_{s} $$
+  - $$ L_{0}J_{S} = j\omega\mu_0 (\int_{S} J_{S}(r')G_{0}(r, r') dS' + \frac{1}{k_0^2}\int_{S} \nabla_{S}^{'}\cdot J_{S}(r') \nabla G_{0}(r, r') dS') $$
+- Galerkin Finite Element Method
