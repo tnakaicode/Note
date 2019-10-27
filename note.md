@@ -21,3 +21,9 @@ wsl --set-version <Distro> 2
 ``` Docker Pull
 docker pull plass/mdtopdf
 ```
+
+``` Docker CentOS
+docker pull centos
+
+time docker run centos /bin/echo "hello world"
+```
