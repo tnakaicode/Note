@@ -17,3 +17,7 @@ Restart PC
 wsl -l
 wsl --set-version <Distro> 2
 ```
+
+``` Docker Pull
+docker pull plass/mdtopdf
+```
