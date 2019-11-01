@@ -1,10 +1,10 @@
 # note
 
-* WSL2
-  * <https://docs.microsoft.com/ja-jp/windows/wsl/wsl2-install>
-  * Windows 10 18917
-  * no serial support
-  * <http://matsuneko22.hateblo.jp/entry/2017/12/09/144803>
+- WSL2
+  - <https://docs.microsoft.com/ja-jp/windows/wsl/wsl2-install>
+  - Windows 10 18917
+  - no serial support
+  - <http://matsuneko22.hateblo.jp/entry/2017/12/09/144803>
 
 ``` WSL2 command as admin
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform

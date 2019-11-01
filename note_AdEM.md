@@ -31,10 +31,10 @@
 
 ## EFIE
 
-* Boundary Condition
-  * PEC surface
-  * Total Tangential electric field is Zero
-  * J_s: induced electric current density
-    * incident field taht impinges on surface S
-    * Given
-    * scatter field everywhere is due to J_s
+- Boundary Condition
+  - PEC surface
+  - Total Tangential electric field is Zero
+  - J_s: induced electric current density
+    - incident field taht impinges on surface S
+    - Given
+    - scatter field everywhere is due to J_s

@@ -1,3 +1,3 @@
 # newFASANT
 
-* [HOME](https://www.fasant.com/)
+- [HOME](https://www.fasant.com/)
