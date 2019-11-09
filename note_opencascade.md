@@ -25,6 +25,12 @@
   - opengl-4-man-doc
 - conda install -c conda-forge -c dlr-sc -c pythonocc -c oce pythonocc-core smesh
 
+``` Conda Install
+conda install -c conda-forge pyopengl tk freetype vtk freeglut tbb mayavi sdl2
+conda install -c dlr-sc freeimage freeimageplus gl2ps
+conda install -c intel libpng tcl
+```
+
 ### Build Error
 
 ``` Error
