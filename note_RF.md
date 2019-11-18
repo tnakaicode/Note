@@ -98,3 +98,65 @@ Frequency Wavelength Time
   - $$ \hat{n} \times E^{i} = \hat{n} \times L_{0} J_{s} $$
   - $$ L_{0}J_{S} = j\omega\mu_0 (\int_{S} J_{S}(r')G_{0}(r, r') dS' + \frac{1}{k_0^2}\int_{S} \nabla_{S}^{'}\cdot J_{S}(r') \nabla G_{0}(r, r') dS') $$
 - Galerkin Finite Element Method
+
+### Circularly polarized antenna
+
+TE Mode: The electric field is perpendicular to the propagation direction, and there is no electric field component in the propagation direction.
+In the xz-plane, the composition of $H_x$ and $H_y$ is oblique with respect to the z-axis, so the Poynting Vector is oblique with respect to the z-axis. The propagating wave travels while repeating reflection on the wall surface of the waveguide.
+Due to this property, the waveguide has an in-tube wavelength in the z-axis direction.
+The cutoff frequency determined by the boundary condition of the waveguide outer wall is determined by the cross-sectional length of the waveguide and the relative dielectric constant inside the waveguide.
+A rectangular waveguide has the same cutoff frequency in TE Mode and TM Mode, but this state is called degeneracy.
+
+$$ \frac{E_x^2}{|E_x|^2} - 2 \frac{E_x E_y}{|E_x||E_y|} \cos(\delta) + \frac{E_y^2}{|E_y|^2} = \sin^2(\delta) $$
+$$ E_x = |E_x| \cos(\omega t) \cos(\delta_x) - |E_x| \sin(\omega t) \sin(\delta_x)$$
+$$ E_y = |E_y| \cos(\omega t) \cos(\delta_y) - |E_y| \sin(\omega t) \sin(\delta_y)$$
+
+Phaser
+$$ \bm{E}(z) = \left[ \begin{array}{c}
+  E_x \\
+  E_y
+\end{array} \right] = \left[ \begin{array}{c}
+  |E_x| \exp^{j \delta_x} \\
+  |E_y| \exp^{j \delta_y}
+\end{array} \right] \exp^{-jkz} = \left[ \begin{array}{c}
+  |E_x| \\
+  |E_y| \exp^{j\delta}  
+\end{array} \right] \exp^{-jkz} $$
+
+LHCP: Left Hand Circuler Pol
+$$ \bm{E_L}(z) = \frac{1}{\sqrt{2}} \left[ \begin{array}{c}
+  1 \\
+  j
+\end{array} \right] $$
+
+RHCP: Right Hand Circuler Pol
+$$ \bm{E_R}(z) = \frac{1}{\sqrt{2}} \left[ \begin{array}{c}
+  1 \\
+  -j
+\end{array} \right] $$
+
+Jones Vectro
+$$ \left[ \begin{array}{c}
+  E_L \\
+  E_R
+\end{array} \right] = \frac{1}{\sqrt{2}} \left[ \begin{array}{cc}
+  1 & j \\
+  1 & -j
+\end{array} \right] \left[ \begin{array}{c}
+  E_x \\
+  E_y
+\end{array} \right] $$
+
+Stokes Parameter
+$$ \bm{S} = \left[ \begin{array}{l}
+  S_0 = |E_x|^2 + |E_y|^2 = A^2 \\
+  S_1 = |E_x|^2 - |E_y|^2 = A^2 \cos(2\tau) \cos(2\epsilon) \\
+  S_2 = 2|E_x||E_y|^2 \cos(\delta) = A^2 \sin(2\tau) \cos(2\epsilon) \\
+  S_3 = 2|E_x||E_y|^2 \sin(\delta) = A^2 \sin(2\epsilon)
+\end{array} \right] $$
+
+AR: Axis Ratio
+$$ AR = \sqrt{\frac{|E_x|^2 \cos^2(\tau) + |E_x||E_y| \sin(2\tau)\cos(\delta) + |E_y|^2 \sin^2(\tau)}{|E_x|^2 \sin^2(\tau) - |E_x||E_y| \sin(2\tau)\cos(\delta) + |E_y|^2 \cos^2(\tau)}} $$
+
+AR may be displayed in db. $AR<3Db$ is often circularly polarized, but AR is closely related to the cross-polarization discrimination XPD, which indicates the magnitude of the difference between the main polarization and cross-polarization.
+The evaluation value of AR should be determined taking into account the effect of polarization loss between the transmitting and receiving antennas.
