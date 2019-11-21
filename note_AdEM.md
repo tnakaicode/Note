@@ -38,3 +38,15 @@
     - incident field taht impinges on surface S
     - Given
     - scatter field everywhere is due to J_s
+
+## Example 4-1
+
+Given:  
+$$ E = a_y ( E_0^{+}\exp(-j\beta z) + E_0^{-}\exp(+j\beta z) ) $$
+Find:  
+corresponding magnetic field
+
+$$ H^{+} = - a_x \frac{E_0^{+}}{\mu_0} \exp(-j\beta z)$$
+$$ H^{-} = + a_x \frac{E_0^{-}}{\mu_0} \exp(+j\beta z)$$
+
+$$ H = a_x \frac{1}{\mu_0}( - E_0^{+}\exp(-j\beta z) + E_0^{-}\exp(+j\beta z) ) $$
