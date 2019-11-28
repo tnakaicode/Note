@@ -1,31 +1,31 @@
 # RF
 
 Frequency
-| Freq    | t [sec]        | t [ms]      | t [us]   | t [ns]  |
-| ------- | -------------- | ----------- | -------- | ------- |
-| 1 Hz    | 1.0 sec        |
-| 2 Hz    | 0.5 sec        |
-| 1 kHz   | 1 / 1000 sec   | 1.0 ms      |
-| 5 kHz   | 1 / 5000 sec   | 0.2 ms      | 200 us   |
-| 10 kHz  | 1 / 10,000 sec | 0.1 ms      | 100 us   |
-| 30 kHz  | 1 / 30,000 sec | 0.03 ms     | 33 us    |
-| 1 MHz   | 1 / 10^6 sec   | 1 / 1000 ms | 1 us     |
-| 1 GHz   | 1 / 10^9 sec   | 1 / 10^6 ms | 0.001 us | 1 ns    |
-| 100 GHz | 1 / 10^11 sec  | 1 / 10^8 ms |          | 0.01 ns |
+|    Freq |        t [sec] |      t [ms] |   t [us] |  t [ns] |
+| ------: | -------------: | ----------: | -------: | ------: |
+|    1 Hz |        1.0 sec |
+|    2 Hz |        0.5 sec |
+|   1 kHz |   1 / 1000 sec |      1.0 ms |
+|   5 kHz |   1 / 5000 sec |      0.2 ms |   200 us |
+|  10 kHz | 1 / 10,000 sec |      0.1 ms |   100 us |
+|  30 kHz | 1 / 30,000 sec |     0.03 ms |    33 us |
+|   1 MHz |   1 / 10^6 sec | 1 / 1000 ms |     1 us |
+|   1 GHz |   1 / 10^9 sec | 1 / 10^6 ms | 0.001 us |    1 ns |
+| 100 GHz |  1 / 10^11 sec | 1 / 10^8 ms |          | 0.01 ns |
 
 Frequency Wavelength Time
-| Freq    | Wave         | Time     |
-| ------- | ------------ | -------- |
-| 1 Hz    | 299,792.5 km | 1.0 sec  |
-| 2 Hz    | 149,896.2 km | 0.5 sec  |
-| 1 kHz   | 299.792 km   | 1.0 ms   |
-| 5 kHz   | 59.958 km    | 0.2 ms   |
-| 10 kHz  | 29.979 km    | 0.1 ms   |
-| 30 kHz  | 9.993 km     | 33 us    |
-| 1 MHz   | 299.792 m    | 1 us     |
-| 1 GHz   | 299.792 mm   | 0.001 us |
-| 100 GHz | 2.998 mm     | 0.01 ns  |
-| 200 GHz | 1.499 mm     | 0.005 ns |
+|    Freq |         Wave |     Time |
+| ------: | -----------: | -------: |
+|    1 Hz | 299,792.5 km |  1.0 sec |
+|    2 Hz | 149,896.2 km |  0.5 sec |
+|   1 kHz |   299.792 km |   1.0 ms |
+|   5 kHz |    59.958 km |   0.2 ms |
+|  10 kHz |    29.979 km |   0.1 ms |
+|  30 kHz |     9.993 km |    33 us |
+|   1 MHz |    299.792 m |     1 us |
+|   1 GHz |   299.792 mm | 0.001 us |
+| 100 GHz |     2.998 mm |  0.01 ns |
+| 200 GHz |     1.499 mm | 0.005 ns |
 
 Conductivity
 |      Material       | class          | $\sigma$ [S/m] |
@@ -48,11 +48,11 @@ Conductivity
 Dierectric
 |     Material     | $\epsilon'_r$ | $\tan(\delta)$ |
 | :--------------: | ------------: | -------------: |
-|       Air        |        1.0006 |                |
+|       Air        |        1.0006 |
 |      Nylon       |           3.5 |         2.0E-2 |
 |      Rubber      |        2.5E-3 |         2.0E-3 |
 |   Fused Silica   |           3.8 |         7.5E-4 |
-|     Sillicon     |          11.8 |                |
+|     Sillicon     |          11.8 |
 |      Teflon      |           2.1 |         3.0E-4 |
 | Distrilled Water |            80 |         4.0E-2 |
 |    Sea Water     |            81 |           4.62 |
@@ -65,12 +65,12 @@ Dierectric
 <https://www.everythingrf.com/tech-resources/waveguides-sizes>
 ![waveguide](./waveguide.jpg)
 
-| EIA | Band [GHz] | Cutoff Low | Cutoff Next | A x B [mm]      |
-| --- | ---------- | ---------- | ----------- | --------------- |
-| WR5 | 140 ~ 220  | 115.714    | 231.429     | 1.2954 x 0.6477 |
-| WR6 | 110 ~ 170  | 90.791     | 181.583     | 1.651 x 0.8255  |
-| WR7 | 110 ~ 170  | 90.791     | 181.583     | 1.651 x 0.8255  |
-| WR8 | 90 ~ 140   | 73.768     | 147.536     | 2.032 x 1.016   |
+| EIA | Band [GHz] | Cutoff Low | Cutoff Next |      A x B [mm] |
+| --- | ---------: | ---------: | ----------: | --------------: |
+| WR5 |  140 ~ 220 |    115.714 |     231.429 | 1.2954 x 0.6477 |
+| WR6 |  110 ~ 170 |     90.791 |     181.583 |  1.651 x 0.8255 |
+| WR7 |  110 ~ 170 |     90.791 |     181.583 |  1.651 x 0.8255 |
+| WR8 |   90 ~ 140 |     73.768 |     147.536 |  2.032 x 1.0160 |
 
 - Waveguide Standard
   - MIL-Spec - United States Military Standard
