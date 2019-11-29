@@ -191,3 +191,48 @@ $$ AR = \sqrt{\frac{|E_x|^2 \cos^2(\tau) + |E_x||E_y| \sin(2\tau)\cos(\delta) + 
 
 AR may be displayed in db. $AR<3Db$ is often circularly polarized, but AR is closely related to the cross-polarization discrimination XPD, which indicates the magnitude of the difference between the main polarization and cross-polarization.
 The evaluation value of AR should be determined taking into account the effect of polarization loss between the transmitting and receiving antennas.
+
+## Irregular Waveguide
+
+Gyro-K, Opti-K, Gyro-KL
+
+Consider the problem of excitation of uniformly filled irregular waveguide, the side surface of which $S_b$ differentfrom regular cylidical surface.
+
+$$ \mathrm{rot}{\bm H} = \epsilon_0 \frac{\partial \bm E}{\partial t} + \bm J $$
+$$ \mathrm{rot}{\bm E} = - \mu_0 \frac{\partial \bm H}{\partial t}$$
+$$ \left.\left[\bm n, \bm E \right] \right|_{S_b} = \sqrt{\frac{\mu_{\sigma}}{\pi\sigma} } \int_0^t \frac{\partial \left. \left[\bm n, \left[ \bm H, \bm n \right] \right] \right|_{S_b}}{\partial\tau} \frac{d\tau}{\sqrt{t-\tau}} $$
+
+- $\sigma$ - Waveguide Conductivity
+- $\mu_{\sigma}$ - Waveguide Magnetic permeability
+
+The Diensity of electric currents $J$ is determined by electron flux.
+
+Introduce a curvilinear coordinate system $\left(r,\phi,s\right)$, connected with waveguide geometry.
+
+- $r,\phi$ - polar coordinate in plane of cross section of waveguide
+- $s$ - the arc length of the axis of waveguide
+
+We Call
+
+- $\bm t = \bm r' / |\bm r'|$ - unit vector tangent to waveguide axis
+- $\bm n = \bm r'' / |\bm r''| = 1 / k \cdot r''$ - unit normal to waveguide axis
+- $\bm b = \bm t \times \bm n$ - binormal to waveguide axis
+
+By Frennes-Serre,
+
+- $\bm t = k \cdot \bm n$
+- $\bm n' = -k \cdot t + \tau \cdot \bm b$
+- $\bm b' = -\tau \cdot \bm n$
+- where
+  - $k = 1 / \rho_k = |\bm r''|$ - angular velocity of rotation of the tangent around the binormal
+  - $\rho_k$ - radius of curvature
+  - $\tau = 1 / \rho_\tau = 1 / k[\bm r'\cdot\bm r''\cdot\bm r''']$ - rotational velocity of binormal round tangent
+  - $\rho_\tau$ - torison radius
+
+Certsian rectangular coordinate $(x, y, z)$ inside waveuide are assosiated with entered coordiate $(r, \phi, s)$ using following relation:
+
+$$ \rm r(\rho, \phi, s) = \bm R(s) + \rho r_b(\phi, s) \{ \bm n(s)\cos(\phi) + \bm b(s) \sin(\phi) \} $$
+
+- $\bm r$ - radius-vector of arbitrary point inside waveguide
+- $\bm R(s)$ - equation of waveguide axis in Certesian coordinate
+- $n(s), b(s)$ - unit vectors of main normal and binormal axis of waveguide
