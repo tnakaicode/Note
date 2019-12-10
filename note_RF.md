@@ -1,17 +1,17 @@
 # RF
 
 Frequency
-|    Freq |        t [sec] |      t [ms] |   t [us] |  t [ns] |
-| ------: | -------------: | ----------: | -------: | ------: |
-|    1 Hz |        1.0 sec |
-|    2 Hz |        0.5 sec |
-|   1 kHz |   1 / 1000 sec |      1.0 ms |
-|   5 kHz |   1 / 5000 sec |      0.2 ms |   200 us |
-|  10 kHz | 1 / 10,000 sec |      0.1 ms |   100 us |
-|  30 kHz | 1 / 30,000 sec |     0.03 ms |    33 us |
-|   1 MHz |   1 / 10^6 sec | 1 / 1000 ms |     1 us |
-|   1 GHz |   1 / 10^9 sec | 1 / 10^6 ms | 0.001 us |    1 ns |
-| 100 GHz |  1 / 10^11 sec | 1 / 10^8 ms |          | 0.01 ns |
+|    Freq |           t [sec] |        t [ms] |   t [us] |  t [ns] |
+| ------: | ----------------: | ------------: | -------: | ------: |
+|    1 Hz |           1.0 sec |
+|    2 Hz |           0.5 sec |
+|   1 kHz |      1 / 1000 sec |        1.0 ms |
+|   5 kHz |      1 / 5000 sec |        0.2 ms |   200 us |
+|  10 kHz |    1 / 10,000 sec |        0.1 ms |   100 us |
+|  30 kHz |    1 / 30,000 sec |       0.03 ms |    33 us |
+|   1 MHz |    1 / $10^6$ sec |   1 / 1000 ms |     1 us |
+|   1 GHz |    1 / $10^9$ sec | 1 / $10^6$ ms | 0.001 us |    1 ns |
+| 100 GHz | 1 / $10^{11}$ sec | 1 / $10^8$ ms |          | 0.01 ns |
 
 Frequency Wavelength Time
 |    Freq |         Wave |     Time |
@@ -30,33 +30,33 @@ Frequency Wavelength Time
 Conductivity
 |      Material       | class          | $\sigma$ [S/m] |
 | :-----------------: | :------------- | -------------: |
+|     Micro-Fiber     | Semi-Conductor |       ~ 7.8E-4 |
+|      Sapphire       | Semi-Conductor |       ~ 5.5E-4 |
+|      Sea Water      | Semi-Conductor |          ~ 4.0 |
+|        GaAs         | Semi-Conductor |      ~ 2.38E-7 |
+| Intrinsic Germanium | Semi-Conductor |        ~ 2.227 |
+|   Distilled Water   | Insulator      |       ~ 1.0E-4 |
+|     Fresh Water     | Semi-Conductor |       ~ 1.0E-2 |
 |    Fused Quartz     | Insulator      |      ~ 1.0E-17 |
 |     Ceresin Wax     | Insulator      |      ~ 1.0E-17 |
-|   Distilled Water   | Insulator      |       ~ 1.0E-4 |
-|        GaAs         | Semi-Conductor |      ~ 2.38E-7 |
-|      Sapphire       | Semi-Conductor |       ~ 5.5E-4 |
-|     Micro-Fiber     | Semi-Conductor |       ~ 7.8E-4 |
-|     Fresh Water     | Semi-Conductor |       ~ 1.0E-2 |
 | Human Animal Tissue | Semi-Conductor |    ~ 0.2 - 0.7 |
-| Intrinsic Germanium | Semi-Conductor |        ~ 2.227 |
-|      Sea Water      | Semi-Conductor |          ~ 4.0 |
-|    Silicon Steel    | Conductor      |         2.0E+6 |
-|        Gold         | Conductor      |         4.1E+7 |
-|       Copper        | Conductor      |        5.76E+7 |
 |       Silver        | Conductor      |         6.1E+7 |
+|       Copper        | Conductor      |        5.76E+7 |
+|        Gold         | Conductor      |         4.1E+7 |
+|    Silicon Steel    | Conductor      |         2.0E+6 |
 
 Dierectric
 |     Material     | $\epsilon'_r$ | $\tan(\delta)$ |
 | :--------------: | ------------: | -------------: |
+| Dehydrated Water |             1 |              0 |
 |       Air        |        1.0006 |
-|      Nylon       |           3.5 |         2.0E-2 |
-|      Rubber      |        2.5E-3 |         2.0E-3 |
-|   Fused Silica   |           3.8 |         7.5E-4 |
 |     Sillicon     |          11.8 |
 |      Teflon      |           2.1 |         3.0E-4 |
+|      Rubber      |        2.5E-3 |         2.0E-3 |
+|      Nylon       |           3.5 |         2.0E-2 |
+|   Fused Silica   |           3.8 |         7.5E-4 |
 | Distrilled Water |            80 |         4.0E-2 |
 |    Sea Water     |            81 |           4.62 |
-| Dehydrated Water |             1 |              0 |
 
 ## Waveguide
 
@@ -67,10 +67,10 @@ Dierectric
 
 | EIA | Band [GHz] | Cutoff Low | Cutoff Next |      A x B [mm] |
 | --- | ---------: | ---------: | ----------: | --------------: |
-| WR5 |  140 ~ 220 |    115.714 |     231.429 | 1.2954 x 0.6477 |
+| WR8 |   90 ~ 140 |     73.768 |     147.536 |  2.032 x 1.0160 |
 | WR6 |  110 ~ 170 |     90.791 |     181.583 |  1.651 x 0.8255 |
 | WR7 |  110 ~ 170 |     90.791 |     181.583 |  1.651 x 0.8255 |
-| WR8 |   90 ~ 140 |     73.768 |     147.536 |  2.032 x 1.0160 |
+| WR5 |  140 ~ 220 |    115.714 |     231.429 | 1.2954 x 0.6477 |
 
 - Waveguide Standard
   - MIL-Spec - United States Military Standard
@@ -88,9 +88,9 @@ Dierectric
 - TM (E) - mode
   - $$ \beta_{c, m, n} = \frac{\chi_{m, n}}{a} $$
 - $TE_{11}$ mode
-  - $$ f_{c, TE_{1, 1}} = \frac{c}{2 \pi} \beta_{c, TE_{1, 1}} = \frac{c}{2 \pi} \frac{\chi^{'}_{m, n}}{a} $$
+  - $$ f_{c, TE_{1, 1}} = \frac{c}{2 \pi} \beta_{c, TE_{1, 1}} = \frac{c}{2 \pi} \frac{\chi^{'}_{1, 1}}{a} $$
 - $TM_{01}$ mode
-  - $$ f_{c, TM_{0, 1}} = \frac{c}{2 \pi} \beta_{c, TM_{0, 1}} = \frac{c}{2 \pi} \frac{\chi_{m, n}}{a}$$
+  - $$ f_{c, TM_{0, 1}} = \frac{c}{2 \pi} \beta_{c, TM_{0, 1}} = \frac{c}{2 \pi} \frac{\chi_{0, 1}}{a}$$
 
 ### Corrugated Circuler Waveguide
 
