@@ -36,3 +36,10 @@ conda install -c intel libpng tcl
 ``` Error
 TKMeshVS
 ```
+
+### Explain
+
+- Geom_BoundedSurface
+  - <https://www.opencascade.com/doc/occt-7.4.0/refman/html/class_geom___bounded_surface.html>
+  - The root class for bounded surfaces in 3D space.
+  - A bounded surface is defined by a rectangle in its 2D parametric space
