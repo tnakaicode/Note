@@ -1,10 +1,14 @@
 # Math
 
-- $$ \int_0 ^\infty \frac{1}{1 + x^2} \frac{1}{1 + x^N} dx $$
-- $$ I = \int_0^\infty \frac{u^N}{(1+u^2)(1+u^N)} du $$
-  - $$ I = \int_0^\infty \frac{1 - 1 +u^N}{(1+u^2)(1+u^N)} du $$
-  - $$ I = - I + \int_0^\infty \frac{1}{(1+u^2)} du $$
-  - $$ I = - I + \frac{\pi}{2} $$
+$$ \int_0 ^\infty \frac{1}{1 + x^2} \frac{1}{1 + x^N} dx $$
+
+$$\begin{aligned}
+  I &=& \int_0^\infty \frac{u^N}{(1+u^2)(1+u^N)} du \\
+  &=& \int_0^\infty \frac{1 - 1 +u^N}{(1+u^2)(1+u^N)} du \\
+  &=& - I + \int_0^\infty \frac{1}{(1+u^2)} du \\
+  &=& - I + \frac{\pi}{2}
+\end{aligned}$$
+
 - $$ \nabla \cdot u = 0 $$
 - $$ \mathrm{rot} \vec{E}  = - \frac{1}{c} \frac{\partial \vec{B}}{\partial t} $$
 - $$ \mathrm{div} \vec{B}  = 0 $$

@@ -1,5 +1,68 @@
 # RF
 
+Dielectric constant of lossy medium
+$$ \epsilon_r = \epsilon_r^{\prime} - j\epsilon_r^{\prime\prime} $$
+
+Relative permeability of lossy medium
+$$ \mu_r = \mu_r^{\prime} - j\mu_r^{\prime\prime} $$
+
+Propagation constant $\gamma$
+$$\begin{aligned}
+  \gamma = \alpha + j\beta &=& j \frac{\omega}{c_0} \sqrt{\epsilon_r\mu_r} \\
+  &=& j \frac{2\pi}{\lambda_0} \sqrt{\epsilon_r\mu_r}
+\end{aligned}$$
+
+- Radio wave propagation inside conductive material
+
+When an electric field is applied to Loss Medium has Specific Induction Rate $\epsilon_e$, Conductivity $\sigma$, a Current ($J=\sigma E$) due to conductivity flows in addition to the Displacement Current ($j\omega D$) due to the Electric field $E$ in the lossy medium.
+
+$$\begin{aligned}
+  D^* = \frac{1}{j\omega}J + D &=& \frac{1}{j\omega}\sigma E + \epsilon_0\epsilon_e E \\
+  &=& \epsilon_0(\frac{\sigma}{j\omega\epsilon_0} + \epsilon_e)E \\
+  &=& \epsilon_0\epsilon_r E
+\end{aligned} $$
+
+Dielectric Constant of conductive material $\epsilon_r$ can be expressed in a form that includes $\sigma$.
+
+$$ \epsilon_r = \epsilon_e - j\frac{\sigma}{\omega\epsilon_0} $$
+
+If $\sigma$ is large, the real part of the relative permittivity can be omitted.
+
+$$ \begin{aligned}
+  \epsilon_r &\approx& -j\epsilon_r^{\prime\prime} \\
+  &=& -j\frac{\sigma}{\omega\epsilon_0}
+\end{aligned} $$
+
+$\epsilon_r^{\prime\prime}$ is inversely proportional to $\omega$. This characteristic is unique to a Conductive Material. If the imaginary part is inversely proportional to $\omega$ by measuring the dielectric constant of a material, the material is a conductive material.  
+The propagation constant of the large $\sigma$ loss media is as follows.
+
+$$\begin{aligned}
+  \gamma &=& j \frac{\omega}{c_0} \sqrt{\epsilon_r\mu_r} \\
+  &=& j \frac{\omega}{c_0} \sqrt{-j\frac{\sigma\mu_r}{\omega\epsilon_0}} \\
+  &=& j \frac{\omega}{c_0} \frac{1-j}{\sqrt{2}} \sqrt{\frac{\sigma\mu_r}{\omega\epsilon_0}} \\
+  &=& (1+j) \sqrt{\frac{1}{c_0^2} \frac{\omega\sigma\mu_r}{2\epsilon_0}} \\
+  &=& (1+j) \sqrt{\epsilon_0\mu_0 \frac{\omega\sigma\mu_r}{2\epsilon_0}} \\
+  &=& (1+j) \sqrt{\frac{\omega\sigma\mu_0\mu_r}{2}} \\
+  &=& \frac{1+j}{\delta}
+\end{aligned}$$
+
+$\delta$ is called the skin depth.
+$$ \delta = \sqrt{\frac{2}{\omega\sigma\mu_0\mu_r}} $$
+In particular,
+$$ \alpha = \beta = \frac{1}{\delta} $$
+
+One of the characteristics of a conductive medium having a large sigma is that both $\alpha$ and $\beta$ are large and equal.  
+The Surface Resistance $R_s$ is expressed as follows.
+
+$$ R_s = \frac{1}{\sigma\delta} $$
+
+The power $P_l$ transmitted from the surface into the conductive medium is expressed as follows.
+
+$$\begin{aligned}
+  P_l &=& \frac{1}{2} \frac{1}{\sigma\delta} |H_{t0}|^2 \\
+  &=& \frac{1}{2} R_s |I_x|^2
+\end{aligned}$$
+
 Frequency
 |    Freq |           t [sec] |        t [ms] |   t [us] |  t [ns] |
 | ------: | ----------------: | ------------: | -------: | ------: |
