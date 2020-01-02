@@ -10,10 +10,36 @@ $$\begin{aligned}
 \end{aligned}$$
 
 - $$ \nabla \cdot u = 0 $$
-- $$ \mathrm{rot} \vec{E}  = - \frac{1}{c} \frac{\partial \vec{B}}{\partial t} $$
-- $$ \mathrm{div} \vec{B}  = 0 $$
-- $$ \mathrm{rot} \vec{B}  = \frac{1}{c} \frac{\partial \vec{E}}{\partial t} + \frac{4\pi}{c} \vec{j} $$
-- $$ \mathrm{div} \vec{E}  = 4 \pi \rho_{\varepsilon } $$
+- $$ \mathrm{rot} \vec{E} = - \frac{1}{c} \frac{\partial \vec{B}}{\partial t} $$
+- $$ \mathrm{div} \vec{B} = 0 $$
+- $$ \mathrm{rot} \vec{B} = \frac{1}{c} \frac{\partial \vec{E}}{\partial t} + \frac{4\pi}{c} \vec{j} $$
+- $$ \mathrm{div} \vec{E} = 4 \pi \rho_{\varepsilon } $$
+
+Rotation
+$$\begin{aligned}
+  \mathrm{rot}{\bm H}({\bm r},t) &= \nabla \times {\bm H}({\bm r},t), \\
+  &=\begin{vmatrix}
+    {\bm e}_{x} & {\bm e}_{y} & {\bm e}_{z}\\
+    \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{partial}{\partial z}\\
+    H_{x}({\bm r},t) & H_{y}({\bm r},t) & H_{z}({\bm r},t)
+  \end{vmatrix}
+\end{aligned}$$
+Laplacian
+$$\begin{aligned}
+  \bigtriangleup &\equiv \left( \frac{\partial^2}{\partial x^2} +\frac{\partial^2}{\partial y^2} +\frac{\partial^2}{\partial z^2}\right) \\
+  &= \nabla^2 \\
+  &= \mathrm{div}\cdot\mathrm{grad}.
+\end{aligned} $$
+$$ z = x+\mathrm{i}y = r\mathrm{e}^{+\mathrm{i}\theta} = r\left(\cos(\theta) + \mathrm{i}\sin(\theta)\right)$$
+$$ \bar z = x - \mathrm{i}y = r\mathrm{e}^{-\mathrm{i}\theta} = r\left(\cos(\theta) - \mathrm{i}\sin(\theta)\right)$$
+$$ \mathrm{e}^{\mathrm{i}\theta} = \cos(\theta) + \mathrm{i}\sin(\theta)$$
+$$ \cos(\theta) = \frac{\mathrm{e}^{\mathrm{i}\theta} + \mathrm{e}^{-\mathrm{i}\theta}}{2}$$
+$$ \sin(\theta) = \frac{\mathrm{e}^{\mathrm{i}\theta} - \mathrm{e}^{-\mathrm{i}\theta}}{2\mathrm{i}}$$
+$$\mathrm{e}^{x} = \cosh(x)+\sinh(x)$$
+$$\mathrm{e}^{-x} = \cosh(x)-\sinh(x)$$
+$$\cosh(x) = \dfrac{\mathrm{e}^{x}+\mathrm{e}^{-x}}{2}$$
+$$\sinh(x) = \dfrac{\mathrm{e}^{x}-\mathrm{e}^{-x}}{2}$$
+$$\tanh(x) = \dfrac{\sinh(x)}{\cosh(x)} = \dfrac{\mathrm{e}^{x} - \mathrm{e}^{-x}}{\mathrm{e}^{x} + \mathrm{e}^{-x}}$$
 
 ## Symbol Perturbation method
 
