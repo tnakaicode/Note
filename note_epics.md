@@ -6,7 +6,7 @@
 - <http://cerldev.kek.jp/trac/EpicsUsersJP>
 - <https://vcis-wiki.f4e.europa.eu/doku.php?id=devenviromenteclipse>
 
-``` git repo
+```markdown
 git clone https://github.com/epics-base/epics-base.git
 cd epics-base
 git submodule add https://github.com/epics-modules/asyn.git modules/asyn
@@ -14,7 +14,7 @@ git submodule add https://github.com/epics-modules/stream.git modules/stream
 git submodule update -i
 ```
 
-``` env
+```markdown
 export EPICS_HOST_ARCH=linux-x86_64
 export EPICS_BASE=$HOME/epics-base
 export EPICS_EXTENSIONS=$HOME/epics-base/modules/
