@@ -64,17 +64,22 @@ $$\begin{aligned}
 \end{aligned}$$
 
 Frequency
-|    Freq |           t [sec] |        t [ms] |   t [us] |  t [ns] |
-| ------: | ----------------: | ------------: | -------: | ------: |
-|    1 Hz |           1.0 sec |
-|    2 Hz |           0.5 sec |
-|   1 kHz |      1 / 1000 sec |        1.0 ms |
-|   5 kHz |      1 / 5000 sec |        0.2 ms |   200 us |
-|  10 kHz |    1 / 10,000 sec |        0.1 ms |   100 us |
-|  30 kHz |    1 / 30,000 sec |       0.03 ms |    33 us |
-|   1 MHz |    1 / $10^6$ sec |   1 / 1000 ms |     1 us |
-|   1 GHz |    1 / $10^9$ sec | 1 / $10^6$ ms | 0.001 us |    1 ns |
-| 100 GHz | 1 / $10^{11}$ sec | 1 / $10^8$ ms |          | 0.01 ns |
+|    Freq |           t [s] |        t [ms] |      t [us] |  t [ns] |
+| ------: | --------------: | ------------: | ----------: | ------: |
+|    1 Hz |           1.0 s |
+|    2 Hz |           0.5 s |
+|   1 kHz |      1 / 1000 s |        1.0 ms |
+|   5 kHz |      1 / 5000 s |        0.2 ms |      200 us |
+|  10 kHz |    1 / 10,000 s |        0.1 ms |      100 us |
+|  30 kHz |    1 / 30,000 s |       0.03 ms |       33 us |
+| 100 kHz |                 |    1 / 100 ms |       10 us |
+|   1 MHz |    1 / $10^6$ s |   1 / 1000 ms |        1 us |
+|  10 MHz |                 |               |      0.1 us |  100 ns |
+| 200 MHz |                 |               |             |    5 ns |
+|   1 GHz |    1 / $10^9$ s | 1 / $10^6$ ms | 1 / 1000 us |    1 ns |
+| 100 GHz | 1 / $10^{11}$ s | 1 / $10^8$ ms |             | 0.01 ns |
+
+- [us] mean [$\mu s$]
 
 Frequency Wavelength Time
 |    Freq |         Wave |     Time |
@@ -93,6 +98,7 @@ Frequency Wavelength Time
 Conductivity
 |      Material       | class          | $\sigma$ [S/m] |
 | :-----------------: | :------------- | -------------: |
+|         SiC         | Semi-Conductor |
 |     Micro-Fiber     | Semi-Conductor |       ~ 7.8E-4 |
 |      Sapphire       | Semi-Conductor |       ~ 5.5E-4 |
 |      Sea Water      | Semi-Conductor |          ~ 4.0 |
