@@ -49,3 +49,23 @@ If a bias voltage is applied, the change in strain around it can be treated in t
 When a high voltage is applied to a polycrystalline material such as ceramic porcelain, polarization in that direction may remain and exhibit piezoelectricity.
 Each domain of the polycrystal has piezoelectricity, but since it is randomly distributed, it does not exhibit piezoelectricity as it is as a whole.
 It is considered that application of a high voltage causes the piezoelectric material to exhibit the same piezoelectricity as a piezoelectric material having a uniform polarization direction.
+
+1918 Application of Langevin's Sonar to Transceiver  
+Transducer for transmitting and receiving underwater ultrasonic waves of several tens of kHz  
+ランジュバン形振動素子
+Langevin type vibrating element
+
+厚み振動する水晶板の両面に鋼鉄の平板を接着したサンドイッチ構造
+水晶部の厚みが薄くなるため水晶は少量で済み、低い電圧で動作する。両面の鋼平板の厚みを変えれば共振周波数を任意に選ぶことができる。  
+Sandwich structure in which a steel plate is bonded to both sides of a vibrating quartz plate
+Since the thickness of the crystal part is reduced, only a small amount of crystal is required and the device operates at a low voltage. The resonance frequency can be arbitrarily selected by changing the thickness of the steel plates on both sides.
+
+BaTiO3 チタン酸バリウム
+PZT チタン酸ジルコン酸鉛
+
+水晶は温度特性が良好のため、時計・発信機・振動子などで使われている。多くはオークトレーブ法による人工のものである。
+結晶の圧電材としては、ADP, CdS, ZnO, LiNiO3などが実用的なものとして知られる
+PVDF(ポリフッ化ビニリデン)などの高分子系のやわらかい圧電材も圧電セラミックに劣らない圧電効果もつものが現れている。
+生体のなかにも骨などが圧電性を示す。
+
+Magneto-Striction 磁歪
