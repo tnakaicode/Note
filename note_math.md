@@ -3,33 +3,41 @@
 $$ \int_0 ^\infty \frac{1}{1 + x^2} \frac{1}{1 + x^N} dx $$
 
 $$\begin{aligned}
-  I &=& \int_0^\infty \frac{u^N}{(1+u^2)(1+u^N)} du \\
+  I
+  &=& \int_0^\infty \frac{u^N}{(1+u^2)(1+u^N)} du \\
   &=& \int_0^\infty \frac{1 - 1 +u^N}{(1+u^2)(1+u^N)} du \\
   &=& - I + \int_0^\infty \frac{1}{(1+u^2)} du \\
   &=& - I + \frac{\pi}{2}
 \end{aligned}$$
 
-- $$ \nabla \cdot u = 0 $$
-- $$ \mathrm{rot} \vec{E} = - \frac{1}{c} \frac{\partial \vec{B}}{\partial t} $$
-- $$ \mathrm{div} \vec{B} = 0 $$
-- $$ \mathrm{rot} \vec{B} = \frac{1}{c} \frac{\partial \vec{E}}{\partial t} + \frac{4\pi}{c} \vec{j} $$
-- $$ \mathrm{div} \vec{E} = 4 \pi \rho_{\varepsilon } $$
+Maxwell-eq
+$$\begin{aligned}
+  \nabla \cdot u &= 0 \\
+  \mathrm{rot} \vec{E} &= - \frac{1}{c} \frac{\partial \vec{B}}{\partial t} \\
+  \mathrm{div} \vec{B} &= 0 \\
+  \mathrm{rot} \vec{B} &= \frac{1}{c} \frac{\partial \vec{E}}{\partial t} + \frac{4\pi}{c} \vec{j} \\
+  \mathrm{div} \vec{E} &= 4 \pi \rho_{\varepsilon }
+\end{aligned}$$
 
 Rotation
 $$\begin{aligned}
-  \mathrm{rot}{\bm H}({\bm r},t) &= \nabla \times {\bm H}({\bm r},t), \\
+  \mathrm{rot}{\bm H}({\bm r},t)
+  &= \nabla \times {\bm H}({\bm r},t), \\
   &=\begin{vmatrix}
     {\bm e}_{x} & {\bm e}_{y} & {\bm e}_{z}\\
     \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{partial}{\partial z}\\
     H_{x}({\bm r},t) & H_{y}({\bm r},t) & H_{z}({\bm r},t)
   \end{vmatrix}
 \end{aligned}$$
+
 Laplacian
 $$\begin{aligned}
-  \bigtriangleup &\equiv \left( \frac{\partial^2}{\partial x^2} +\frac{\partial^2}{\partial y^2} +\frac{\partial^2}{\partial z^2}\right) \\
+  \bigtriangleup
+  &\equiv \left( \frac{\partial^2}{\partial x^2} +\frac{\partial^2}{\partial y^2} +\frac{\partial^2}{\partial z^2}\right) \\
   &= \nabla^2 \\
   &= \mathrm{div}\cdot\mathrm{grad}.
 \end{aligned} $$
+
 $$ z = x+\mathrm{i}y = r\mathrm{e}^{+\mathrm{i}\theta} = r\left(\cos(\theta) + \mathrm{i}\sin(\theta)\right)$$
 $$ \bar z = x - \mathrm{i}y = r\mathrm{e}^{-\mathrm{i}\theta} = r\left(\cos(\theta) - \mathrm{i}\sin(\theta)\right)$$
 $$ \mathrm{e}^{\mathrm{i}\theta} = \cos(\theta) + \mathrm{i}\sin(\theta)$$

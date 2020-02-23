@@ -58,7 +58,8 @@ $$ c_c = 2 \sqrt{m \cdot k} $$
 
 Response from system
 $$ \begin{aligned}
-    x(t) &= X \exp(-\zeta\omega_0 t)\sin(\sqrt{1-\zeta^2}\omega_0 t + \phi) \\
+    x(t)
+    &= X \exp(-\zeta\omega_0 t)\sin(\sqrt{1-\zeta^2}\omega_0 t + \phi) \\
     &= X \exp(-\zeta\omega_0 t)\sin(\omega + \phi)
 \end{aligned}$$
 $$ \omega = \sqrt{1 - \zeta^2} \omega_0 $$
