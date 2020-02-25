@@ -50,3 +50,25 @@ Helium is suddenly pushed into the vacuum, and when the molecules spread, they a
 Joule-Thomson effect
 Helium has a particularly low critical point of 5.2K.
 Once liquid is formed, pump down the gas and reduce the pressure. When the pressure drops, the liquid evaporates, absorbing the heat of evaporation from the surroundings to lower the temperature.
+
+## 高圧IGBT多直列技術
+
+電力系統，産業プラント，電気鉄道などで適用される電力変換装置は高圧・大容量であるため，以前はサイリスタやGTO（Gate Turn-Off）サイリスタなどのデバイスが主流を占めていた。
+一方，汎用インバータなどの比較的中小容量の変換装置にはIGBT（Insulated  Gate  BipolarTransistor）が広く適用されており，高性能化が図られている。
+
+Since power converters used in power systems, industrial plants, electric railways, etc. have high voltage and large capacity, devices such as thyristors and GTO (Gate Turn-Off) thyristors used to dominate before.
+On the other hand, IGBTs (Insulated Gate Bipolar Transistors) are widely applied to converters with relatively small and medium capacities, such as general-purpose inverters, to achieve higher performance.
+
+デバイスを直列接続したときの最大の問題点は，各デバイスのスイッチングタイミングに差が生じたとき，各デバイスの素子電圧が不平衡となり，特定のデバイスに過大な電圧責務がかかることである。
+IGBTの場合，他の電力用デバイスと比較すると，スイッチング速度が速く，素子電圧の不平衡が大きくなる傾向がある。
+特にターンオフ時には，電流遮断時に発生する過渡電圧が主回路電圧に重畳するため，素子破壊を招く可能性が強くなる。
+素子電圧の不平衡を抑制することが，IGBTを直列接続する際の最大の課題となる
+
+The biggest problem with connecting devices in series is that when there is a difference in the switching timing of each device, the element voltages of each device become unbalanced, and a particular device takes an excessive voltage responsibility.
+In the case of IGBTs, the switching speed tends to be faster and the device voltage unbalance tends to be larger than other power devices.
+Particularly at the time of turn-off, a transient voltage generated at the time of current interruption is superimposed on the main circuit voltage, so that the possibility of destruction of the element is increased.
+Suppressing device voltage imbalance is the biggest challenge when connecting IGBTs in series
+
+直列接続されているIGBTのゲート線を，コア（以下，ゲートバランスコアという）によって磁気的に結合させ，スイッチング時に流れるゲート電流のタイミングをバランスさせるものである。その結果，素子電圧分担を均等化させることができる。
+
+The gate lines of the IGBTs connected in series are magnetically coupled by a core (hereinafter, referred to as a gate balance core) to balance the timing of the gate current flowing during switching. As a result, element voltage sharing can be equalized.
