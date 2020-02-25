@@ -15,6 +15,11 @@ Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
+![iruka0](2020-02-25-21-47-48.png)
+![iruka1](2020-02-25-21-46-56.png)
+![iruka2](2020-02-25-21-47-13.png)
+![iruka3](2020-02-25-21-47-24.png)
+
 Restart PC
 
 WSL2
