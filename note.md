@@ -1,31 +1,39 @@
 # note
 
 - <http://www002.upp.so-net.ne.jp/latex/greece.html>
+- <https://www.fujielectric.co.jp/about/company/jihou_2002/pdf/75-08/07.pdf>
 - WSL2
   - <https://docs.microsoft.com/ja-jp/windows/wsl/wsl2-install>
   - Windows 10 18917
   - no serial support
   - <http://matsuneko22.hateblo.jp/entry/2017/12/09/144803>
 
-``` WSL2 command as admin
+WSL2 command as admin
+
+```Markdown
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
 Restart PC
 
-``` WSL2
+WSL2
+
+```Markdown
 wsl -l
 wsl --set-version <Distro> 2
 ```
 
-``` Docker Pull
+Docker Pull
+
+```Markdown
 docker pull plass/mdtopdf
 ```
 
-``` Docker CentOS
-docker pull centos
+Docker CentOS
 
+```Markdown
+docker pull centos
 time docker run centos /bin/echo "hello world"
 ```
 
