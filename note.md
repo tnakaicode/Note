@@ -1,7 +1,6 @@
 # note
 
 - <http://www002.upp.so-net.ne.jp/latex/greece.html>
-- <https://www.fujielectric.co.jp/about/company/jihou_2002/pdf/75-08/07.pdf>
 - WSL2
   - <https://docs.microsoft.com/ja-jp/windows/wsl/wsl2-install>
   - Windows 10 18917
@@ -15,10 +14,10 @@ Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
-![iruka0](2020-02-25-21-47-48.png)
-![iruka1](2020-02-25-21-46-56.png)
-![iruka2](2020-02-25-21-47-13.png)
-![iruka3](2020-02-25-21-47-24.png)
+![iruka0](./img/2020-02-25-21-47-48.png)
+![iruka1](./img/2020-02-25-21-46-56.png)
+![iruka2](./img/2020-02-25-21-47-13.png)
+![iruka3](./img/2020-02-25-21-47-24.png)
 
 Restart PC
 
@@ -56,7 +55,9 @@ Joule-Thomson effect
 Helium has a particularly low critical point of 5.2K.
 Once liquid is formed, pump down the gas and reduce the pressure. When the pressure drops, the liquid evaporates, absorbing the heat of evaporation from the surroundings to lower the temperature.
 
-## 高圧IGBT多直列技術
+## High-voltage IGBT multi-series technology
+
+- <https://www.fujielectric.co.jp/about/company/jihou_2002/pdf/75-08/07.pdf>
 
 電力系統，産業プラント，電気鉄道などで適用される電力変換装置は高圧・大容量であるため，以前はサイリスタやGTO（Gate Turn-Off）サイリスタなどのデバイスが主流を占めていた。
 一方，汎用インバータなどの比較的中小容量の変換装置にはIGBT（Insulated  Gate  BipolarTransistor）が広く適用されており，高性能化が図られている。
