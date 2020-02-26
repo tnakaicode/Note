@@ -77,3 +77,18 @@ Suppressing device voltage imbalance is the biggest challenge when connecting IG
 直列接続されているIGBTのゲート線を，コア（以下，ゲートバランスコアという）によって磁気的に結合させ，スイッチング時に流れるゲート電流のタイミングをバランスさせるものである。その結果，素子電圧分担を均等化させることができる。
 
 The gate lines of the IGBTs connected in series are magnetically coupled by a core (hereinafter, referred to as a gate balance core) to balance the timing of the gate current flowing during switching. As a result, element voltage sharing can be equalized.
+
+## Check the battery consumption with a tester
+
+電池に負荷抵抗をつないで調べる。
+電池が実際に使われている状態を再現して電流が流れている時の、電池の端子電圧を測定する。
+電池の内部抵抗は使えば使うほど大きくなる。
+内部抵抗にかかる電圧分が低下した端子電圧になる。負荷をつけずに電流が流れると内部抵抗による電圧降下がないため(?)、負荷をつけないで電圧を測っても電池の消耗度は分からない。
+
+Check by connecting the load resistance to the battery.
+Measure the terminal voltage of the battery when the current is flowing, reproducing the state in which the battery is actually used.
+The more the battery is used, the greater the internal resistance of the battery.
+The voltage applied to the internal resistance becomes the reduced terminal voltage. If the current flows without a load, there is no voltage drop due to the internal resistance (?). Therefore, even if the voltage is measured without a load, the consumption of the battery is not known.
+
+- 赤 - 左手 - 正極
+- 黒 - 右手 - 負極
