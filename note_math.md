@@ -1,5 +1,7 @@
 # Math
 
+$$ k_{\preceq}, k_{\parallel} $$
+
 $$ \int_0 ^\infty \frac{1}{1 + x^2} \frac{1}{1 + x^N} dx $$
 
 $$\begin{aligned}
@@ -71,3 +73,41 @@ Here, $M$ is a sufficiently large positive integer.
 Let the topological space $\Chi = \mathbb{R}^d$ be the input space. The normal distribution with mean $\mu\in\mathbb{R}$ and variance $\sigma^2\ge0$ on R is given by the density function $p(x)$.
 $$ p (x) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp(-\frac{(x-\mu)^2}{2\sigma^2}) $$
 When $\sigma = 0$, it is a Dirac measure on the order of $\mu$.
+
+## Table
+
+| Symbol            |                 |                    |                  |
+| ----------------- | --------------- | ------------------ | ---------------- |
+| $\pm$             | \pm             | $\mp$              | \mp              |
+| $\leq$            | \leq            | $\geq$             | \geq             |
+| $\sim$            | \sim            | $\simeq$           | \simeq           |
+| $\approx$         | \approx         |
+| $\neq$            | \neq            | $\equiv$           | \equiv           |
+| $\propto$         | \propto         | $\infty$           | \infty           |
+| $\partial$        | \partial        | $\nabla$           | \nabla           |
+| $\prep$           | \prep           | $\parallel$        | \parallel        |
+| $\times$          | \times          | $\div$             | \div             |
+| $\cdot$           | \cdot           |
+| $\star$           | \star           | $\ast$             | \ast             |
+| $\circ$           | \circ           | $\bullet$          | \bullet          |
+| $\diamond$        | \diamond        |
+| $\triangle$       | \triangle       | $\triangledown$    | \triangledown    |
+| $\bigtriangleup$  | \bigtriangleup  | $\bigtriangledown$ | \bigtriangledown |
+| $\square$         | \square         | $\bigcirc$            | \bigcirc            |
+| $\leftarrow$      | \leftarrow      | $\rightarrow$      | \rightarrow      |
+| $\Leftarrow$      | \Leftarrow      | $\Rightarrow$      | \Rightarrow      |
+| $\leftrightarrow$ | \leftrightarrow | $\Leftrightarrow$  | \Leftrightarrow  |
+| $\longleftarrow$  | \longleftarrow  | $\longrightarrow$  | \longrightarrow  |
+| $\Longleftarrow$  | \Longleftarrow  | $\Longrightarrow$  | \Longrightarrow  |
+| $\uparrow$        | \uparrow        | $\downarrow$       | \downarrow       |
+| $\Uparrow$        | \Uparrow        | $\Downarrow$       | \Downarrow       |
+| $\updownarrow$    | \updownarrow    | $\Updownarrow$     | \Updownarrow     |
+| $\nearrow$        | \nearrow        | $\searrow$         | \searrow         |
+| $\swarrow$        | \swarrow        | $\nwarrow$         | \nwarrow         |
+| $\angle$          | \angle          |
+| $\flat$           | \flat           |
+| $\natural$        | \natural        | $\sharp$           | \sharp           |
+| $\backslash$      | \backslash      |
+| $\clubsuit$       | \clubsuit       | $\diamondsuit$     | \diamondsuit     |
+| $\heartsuit$      | \heartsuit      | $\spadesuit$       | \spadesuit       |
+| $\dagger$         | \dagger         |
