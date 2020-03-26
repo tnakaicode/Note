@@ -19,6 +19,11 @@
 - [PythonOCC](https://github.com/tpaviot/pythonocc-core.git)
 - [PythonOCC-Utils](https://github.com/tpaviot/pythonocc-utils.git)
 - [PythonOCC-DEMO](https://github.com/tpaviot/pythonocc-demos.git)
+- [OCCT](https://github.com/LaughlinResearch/pyOCCT.git)
+  - <https://pyocct.readthedocs.io/en/latest/index.html>
+  - <https://github.com/tnakaicode/pythonocct.git>
+- [AFEM](https://github.com/LaughlinResearch/AFEM.git)
+  - <https://github.com/tnakaicode/AFEM-OCC.git>
 - OpenGL
   - freeglut3-dev
   - liboce-visualization11
