@@ -20,15 +20,24 @@
 - [PythonOCC-Utils](https://github.com/tpaviot/pythonocc-utils.git)
 - [PythonOCC-DEMO](https://github.com/tpaviot/pythonocc-demos.git)
 - [OCCT](https://github.com/LaughlinResearch/pyOCCT.git)
-  - <https://pyocct.readthedocs.io/en/latest/index.html>
   - <https://github.com/tnakaicode/pythonocct.git>
+  - <https://pyocct.readthedocs.io/en/latest/index.html>
 - [AFEM](https://github.com/LaughlinResearch/AFEM.git)
+  - <https://github.com/tnakaicode/pythonocct-afem.git>
+  - <https://github.com/tnakaicode/pythonocct.git>
   - <https://github.com/tnakaicode/AFEM-OCC.git>
+- [Netgen](https://ngsolve.org/docu/latest/i-tutorials/index.html)
+  - conda install -c conda-forge -c ngsolve ngsolve
+- [Nastran]
 - OpenGL
   - freeglut3-dev
   - liboce-visualization11
   - opengl-4-man-doc
-- conda install -c conda-forge -c dlr-sc -c pythonocc -c oce pythonocc-core smesh
+- conda install -c conda-forge -c dlr-sc -c pythonocc-core
+  - python=3.7.6
+  - python=3.8
+- conda install -c laughlinresearch pyocct
+  - python=3.6.7
 
 ```Markdown
 conda install -c conda-forge pyopengl tk freetype vtk freeglut tbb mayavi sdl2
