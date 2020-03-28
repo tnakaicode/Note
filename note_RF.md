@@ -141,7 +141,7 @@ Dierectric
 ### Rectanguler Waveguide
 
 <https://www.everythingrf.com/tech-resources/waveguides-sizes>
-![waveguide](./waveguide.jpg)
+![waveguide](./img/waveguide.jpg)
 
 | EIA | Band [GHz] | Cutoff Low | Cutoff Next |      A x B [mm] |
 | --- | ---------: | ---------: | ----------: | --------------: |

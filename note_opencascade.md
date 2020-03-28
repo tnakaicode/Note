@@ -33,7 +33,7 @@
   - freeglut3-dev
   - liboce-visualization11
   - opengl-4-man-doc
-- conda install -c conda-forge -c dlr-sc -c pythonocc-core
+- conda install -c conda-forge -c dlr-sc pythonocc-core
   - python=3.7.6
   - python=3.8
 - conda install -c laughlinresearch pyocct
