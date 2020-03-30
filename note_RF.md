@@ -251,6 +251,103 @@ Dierectric
   - $$ L_{0}J_{S} = j\omega\mu_0 (\int_{S} J_{S}(r')G_{0}(r, r') dS' + \frac{1}{k_0^2}\int_{S} \nabla_{S}^{'}\cdot J_{S}(r') \nabla G_{0}(r, r') dS') $$
 - Galerkin Finite Element Method
 
+- FEM and MoM
+  - <https://www.edaboard.com/showthread.php?62777-FEM-Vs-MoM-a-discussion>
+  - two major numerical technique that EM Modeling
+  - the results produced by FEM are much better when compared experimentally than by MoM
+  - need a couple of real time facts/reasons that prove FEM performs better than MoM
+  - FEM is a volume meshing approach
+    - Volume meshing is more appropriate for most 3-D arbitrary geometries
+    - FEM cells are large and its matrix is very large
+    - but
+    - it is generally a sparse matrix and can easily be solved using iterative solvers
+  - MoM is usually a surface meshing approach
+    - specialized to planar geometries and is more appropriate for most planar geometries
+    - MoM the excitation modelling is generally a problem and we have to model the exact excitation
+    - the Green's function is a sum of sines and cosines
+      - There are no nasty integrations
+
+- Higher Order Hierarchical Legendre Basis Functions for Electromagnetic Modeling
+  - Divergence-conforming basis functions
+    - impose normal continuity of a vector quantity
+    - such as the electric surface current density in MoM
+  - whereas
+  - Curl-conforming functions
+    - impose tangential continuity are applied FEM
+  - High Order Function category
+    - Interpolatory
+      - interpolate the value of a field quantity at a number of interpolation points
+        - s.t only one function is non-zero at the interpolation points
+      - Direct physical interpretation of the unknown coefficients
+      - limited the expansion order
+        - must be kept constant throughout the mesh
+        - thus  requiring a mesh with equally sized elements
+    - Hierarchical
+      - The basis of order M is a subset of the basis of order M + 1
+        - which enables different expansion orders on different elements in the same mesh
+      - include low-order basis, RWQ, rooftop
+    - Orthogonality of Basis function in MoM
+      - $L^c - f^c = g^c$
+        - $L^c$ : integro-defferential operator
+        - $g^c$ : known vector function
+        - $f^c$ : un-known vector function
+        - $c$ : indicate
+      - $[ L ] - {f} = {g}$
+      - $L_ij = < T_i, L^c - B_j >$
+      - $g_i  = < T_i, g^c >$
+        - $T_i, B_j$ : Basis function
+        - matrix $[ L ]$ must be well-conditioned to solve ${f}$
+      - $S_ij = < T_i, B_j >$
+        - $[ S ]^-1 [ L ]$ approximate a subset of continuous oprator $L^c$
+        - $[ S ]^-1 [ L ]$ is independent of the choice of testing and basis functions
+    - Construction of Basis for Quadrilateral
+      - $J_s = J_s^u *a_u + J_s^v *a_v$
+        - Surface Current
+      - $J_s^u = 1/( J'_s(u,v) ) \sum {m=0,M} \sum_{n=0,N} {a_{mn}^u P_m(u) P_n(v)}$
+        - $J'_s(u,v)$ : Jacobian
+        - $a_mn^u$ : un-known coefficient
+        - $P_m, P_n$ : expansion polynomial
+        - Jacobian required by the curvilinear geometry modeling
+          - when normal continuity between elements is desired
+          - However
+          - difficult to derive an orthogonal basis set for all possible patch shapes
+        - Orthogonality of the basis functions
+          - only maintained when $\frac{a_u}{J'(u,v)}$ has no u, v dependence
+          - i.e. rectangular or rhomboid-shaped patches
+      - Choise of Polynomial is important
+        - choise Legendre Polynomial
+        - this polynomial is not approximate
+          - if
+          - normal continuity is to be enforced, of the current flowing across patch boundary
+        - Instead
+        - polynomials along the direction of current flow must be modified
+        - s.t
+          - single low-order polynomial is nonzero at $u = -1$
+          - single low-order polynomial is nonzero at $u = 1$
+          - higher order polynomials are zero at $u = -1, 1$
+        - Modified Legendre Polynomial $P_m^{mod} (u)$
+          - $1 - u (m=0)$
+          - $1 + u (m=1)$
+          - $P_m - 1 (m=odd)$
+          - $P_m - u (m=even)$
+        - Orthogonarilty mod-Legendre poly have been destroyed
+        - the lack of orthogonality can be avoided
+          - by using partialGramm–Schmidt orthogonalization for higher order
+          - this method is recommended
+          - because
+          - destroyed the property of $P_m^{mod} = 0 (m >= 2)$
+        - Alternative Modified higher order Legendre Polynomial P~_m
+          - $1 - u (m=0)$
+          - $1 + u (m=1)$
+          - $P_m - P_(m-2) (m >= 2)$
+        - this idea to formulate scalar entire-domain basis functions for differential eq
+        - However
+        - the vectorial sub-sectional basis functions derived differ significantly
+      - determine appropriate scaling factors
+        - for the basis functions minimize the condition number
+        - good choise is Euclidean norm of each basis function
+      - Property of Expansion
+
 ### Circularly polarized antenna
 
 TE Mode: The electric field is perpendicular to the propagation direction, and there is no electric field component in the propagation direction.

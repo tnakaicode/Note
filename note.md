@@ -93,3 +93,47 @@ The voltage applied to the internal resistance becomes the reduced terminal volt
 
 - 赤 - 左手 - 正極
 - 黒 - 右手 - 負極
+
+## Memo
+
+- 量子暗号
+  - <http://www.scat.or.jp/frontier/frontier75/waseda.pdf>
+  - 現代暗号技術
+    - ハッシュ関数 SHA-1(160[bit])をSHA-2(256[bit])への変更
+    - 公開鍵暗号RSAの鍵長を1024[bit]から2048[bit]へ延ばす
+    - システム更新時のサービスの継続性(BCP)に影響する
+    - 互換性維持に伴う安全性低下
+    - one time pad
+  - 量子暗号技術
+    - 量子鍵配送
+      - one time padでの問題点
+      - 安全な鍵の共有が可能
+    - SECOQC Secure Communication based on Quantum Cryptography
+    - 東京QKDネットワーク
+  - 量子複数秘密分散法
+    - 参加者の集合P
+    - 秘密の量子状態の集合$\{S_1, ..., S_n\}$
+    - 各々の秘密$Si$に対して
+      - 純粋化に用いた補助系$R_i$
+      - アクセス構造を$\Gamma_i$
+    - 各$\Gamma_i$に対して$T_i=\{R_1, ..., R_n\} \ \{R_i\}$
+    - 任意の$i$に対して以下の条件を満たすものを量子複数秘密分散法と定義する
+      - Recoverability $\forall A \in \Gamma_i, I(R_i:T_iA) = I(R_i:S_i)$
+      - Secrecy $\forall B \notin \Gamma_i, I(R_i:T_iB) = 0$
+  - 光ファイバ帯域の量子通信暗号路の通信容量の評価
+    - 50THz Modulatin
+      - Phase Shift Keying PSK
+      - Quadrature Amplitude Modulation QAM
+    - 検出
+      - Hetero-Dyne
+      - Homo-Dyne
+    - Holevo Information
+      - SRD Square Root Detection
+      - 量子測定
+      - 以上から得られる最大の情報量
+    - 入力電力　1uW以下
+      - BPSK
+      - Homo-Dyne
+    - 入力電力　1uW以上　1mW以下
+      - 多値で変調
+      - Hetero-Dyne
