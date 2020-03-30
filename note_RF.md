@@ -136,6 +136,48 @@ Dierectric
 | Distrilled Water |            80 |         4.0E-2 |
 |    Sea Water     |            81 |           4.62 |
 
+## RF Device
+
+- ミリ波回路デバイス
+- 周波数変換器
+  - Hetero-Dyne
+    - ヘテロダイン方式
+    - IF回路が必要
+    - 受信感度がHomo-Dyneに比べて高い
+  - Homo-Dyne
+    - ホモダイン方式
+    - IF回路が必要ない
+    - 部品点数を削減できマルチバンド化が容易
+    - System on Chip SOC化が容易
+- 変調器
+  - I/Q直交変調
+  - 極座標変調(ポーラ変調)
+    - 振幅変調と位相変調の組み合わせ
+    - 振幅変調　増幅器の直接制御
+    - 位相変調　発振器の周波数変調器を時間積分する
+- 電力増幅器
+  - パラメータ
+    - 出力レベル
+    - 非線形性
+    - 雑音指数
+    - 帯域幅
+    - DC-RF電力効率
+  - Doherty増幅器
+  - Linear Amplification using Non-Linear Comonents LINC増幅器
+  - ひずみ補正技術
+    - 入力複素包絡線の瞬時値
+    - 入力複素包絡線のメモリ効果
+    - 隣接する周波数帯域への漏洩電力の削減につながる技術
+    - <http://www.oit.ac.jp/elc/~kumamoto/radio/06.pdf>
+- 発振器
+  - 発振器の雑音
+  - Amplitude Modulation AM雑音
+  - Phase Modulation PM雑音
+  - 支配的な雑音はPM雑音
+    - 発振器が自律システムであるため
+  - Frequnecy Modulation 発振器の周波数変調
+    - Digital Control Oscillator デジタル制御
+
 ## Waveguide
 
 ### Rectanguler Waveguide
