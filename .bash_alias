@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if ! service ssh status > /dev/null 2>&1
+then
+        sudo ssh_start.sh
+fi

@@ -78,6 +78,156 @@ proxy_servers:
 pip install <name> --proxy http://proxy.example.com:8080
 ```
 
+```PowerShell
+# install_Ubuntu.ps1
+# You need to Execute this command and reboot in advance.
+# Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
+# Password Setting
+$secPasswd=ConvertTo-SecureString <ProxyPassword> -AsPlainText -Force
+# User and Credential Setting
+$myCreds=New-Object System.Management.Automation.PSCredential -ArgumentList <ProxyUsername>,$secPasswd
+
+# Download Image
+Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile $home/Ubuntu.appx -Proxy <ProxyServerName> -proxyCredential $myCreds
+
+# Unzip File
+Rename-Item $home\Ubuntu.appx $home\Ubuntu.zip
+Expand-Archive $home\Ubuntu.zip $home\Ubuntu
+
+# Create Shortcut in Desktop
+cd $home\Ubuntu
+$WshShell = New-Object -comObject WScript.Shell
+$Shortcut = $WshShell.CreateShortcut("$Home\Desktop\ubuntu1804.lnk")
+$Shortcut.TargetPath = "$home\Ubuntu\ubuntu1804.exe"
+$Shortcut.Save()
+```
+
+```bash
+#!/bin/bash
+
+# setting http proxy
+cat <<'EOF' >> ~/.bashrc
+
+# http proxy setting
+export HTTP_PROXY_USER=id
+export HTTP_PROXY_PASS=pass
+export HTTP_PROXY=http://${HTTP_PROXY_USER}:${HTTP_PROXY_PASS}@proxysrv:port/
+export HTTPS_PROXY=${HTTP_PROXY}
+
+# git proxy setting
+git config --global http.proxy ${HTTP_PROXY}
+git config --global https.proxy ${HTTPS_PROXY}
+git config --global url."https://".insteadOf git://
+EOF
+
+# setting apt proxy
+echo <suPassword> | sudo tee /etc/apt/apt.conf <<EOF > /dev/null
+Acquire::http::proxy "http://id:pass@proxysrv:port/";
+Acquire::https::proxy "https://id:pass@proxysrv:port/";
+EOF
+
+
+# setting wget proxy
+echo <suPassword> | sudo tee -a /etc/wgetrc <<EOF > /dev/null
+
+# wget proxy setting
+https_proxy = http://id:pass@proxysrv:port/
+http_proxy = http://id:pass@proxysrv:port/
+ftp_proxy = http://id:pass@proxysrv:port/
+EOF
+```
+
+## SSH for WSL on Win10
+
+A -> B
+
+### Setting of A (Client)
+
+Check IP and Port of WSL
+
+```PowerShell
+netstat -ano
+```
+
+make SSH-Key in Win10 by CMD
+
+```dos
+cd ~/.ssh
+ssh-keygen -t rsa -f id_rsa_wsl
+scp id_rsa_wsl \\wsl$\Ubuntu\home\<username>\.ssh
+```
+
+### Setting of B (Host)
+
+/etc/ssh/sshd_config
+
+```bash
+ # To disable tunneled clear text passwords, change to no here!
+ PasswordAuthentication no
++PasswordAuthentication yes
+ #PermitEmptyPasswords no
+
+ # Change to yes to enable challenge-response passwords (beware issues with
+ # some PAM modules and threads)
+-ChallengeResponseAuthentication no
++ChallengeResponseAuthentication yes
++#ChallengeResponseAuthentication no
+```
+
+~/ssh_star.sh
+
+```bash
+service ssh start
+service dbus start
+service avahi-daemon start
+service cron start
+service ssh status
+```
+
+~/.bash_alias
+
+```bash
+if ! service ssh status > /dev/null 2>&1
+then
+        sudo ssh_start.sh
+fi
+```
+
+## SSH for github
+
+SSH Pub-Key in github
+
+```bash
+cd ~/.ssh
+ssh-keygen -t rsa -f id_rsa_github
+clip < id_rsa_github.pub
+# Add SSH Pubulic Key in Github Site
+```
+
+~/.ssh/config
+
+```bash
+Host github github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa_gihub
+```
+
+~/.gitconfig
+
+```bash
+[url "github:"]
+    InsteadOf = https://github.com/
+    InsteadOf = git@github.com:
+```
+
+Test and Debug
+
+```bash
+ssh -vT git@github.com
+```
+
 ## Liquefaction of helium
 
 ヘリウムの液化に用いられる冷却方法
