@@ -64,6 +64,20 @@ Acquire::http::proxy "http://id:pass@proxysrv:port/";
 Acquire::https::proxy "https://id:pass@proxysrv:port/";
 ```
 
+Proxy setting for Git, conda and pip
+
+```bash
+git config --global http.proxy http://proxy.example.com:8080
+git config --global https.proxy http://proxy.example.com:8080
+
+# .condarc
+proxy_servers:
+    http: http://USER:PASSWORD@PROXYSERVER:PORT
+    https: https://USER:PASSWORD@PROXYSERVER:PORT
+
+pip install <name> --proxy http://proxy.example.com:8080
+```
+
 ## Liquefaction of helium
 
 ヘリウムの液化に用いられる冷却方法
