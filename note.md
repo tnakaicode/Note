@@ -9,7 +9,7 @@
 
 WSL2 command as admin
 
-```Markdown
+```bash
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
@@ -23,22 +23,45 @@ Restart PC
 
 WSL2
 
-```Markdown
+```bash
 wsl -l
 wsl --set-version <Distro> 2
 ```
 
 Docker Pull
 
-```Markdown
+```bash
 docker pull plass/mdtopdf
 ```
 
 Docker CentOS
 
-```Markdown
+```bash
 docker pull centos
 time docker run centos /bin/echo "hello world"
+```
+
+Git Config
+
+```bash
+git config --global user.email "tnakaicode@gmail.com"
+git config --global user.name "TNakai"
+```
+
+SSH Keygen
+
+```bash
+cd ~/.ssh
+ssh-keygen -t rsa -f id_rsa_git
+clip < id_rsa_git
+scp id_rsa_git \\wsl$\Ubuntu-18.04\home\<username>\.ssh
+```
+
+Proxy setting on WSL (/etc/apt/apt.conf)
+
+```bash
+Acquire::http::proxy "http://id:pass@proxysrv:port/";
+Acquire::https::proxy "https://id:pass@proxysrv:port/";
 ```
 
 ## Liquefaction of helium
