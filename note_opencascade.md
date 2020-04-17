@@ -1,5 +1,15 @@
 # OpenCASCADE
 
+## Install
+
+```bash
+# python=3.7
+conda install -c dlr-sc pythonocc-core=7.4.0
+
+# python=3.8
+conda install -c conda-forge pythonocc-core=7.4.0
+```
+
 ## Build
 
 - .hxx - this is the user header file to be included by your C++ code
