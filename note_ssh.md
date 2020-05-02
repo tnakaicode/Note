@@ -1,10 +1,10 @@
-# NOTE SSH
+# 1. NOTE SSH
 
-## SSH for WSL on Win10
+## 1.1. SSH for WSL on Win10
 
 A -> B
 
-### Setting of A (Client)
+### 1.1.1. Setting of A (Client)
 
 Check IP and Port of WSL
 
@@ -20,7 +20,7 @@ ssh-keygen -t rsa -f id_rsa_wsl
 scp id_rsa_wsl \\wsl$\Ubuntu\home\<username>\.ssh
 ```
 
-### Setting of B (Host)
+### 1.1.2. Setting of B (Host)
 
 /etc/ssh/sshd_config
 
@@ -56,7 +56,7 @@ then
 fi
 ```
 
-## SSH for github
+## 1.2. SSH for github
 
 SSH Pub-Key in github
 
@@ -89,3 +89,5 @@ Test and Debug
 ```bash
 ssh -vT git@github.com
 ```
+
+## 1.3. Remote Desktop
