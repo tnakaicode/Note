@@ -10,6 +10,9 @@ Check IP and Port of WSL
 
 ```PowerShell
 netstat -ano
+netsh advfirewall firewall add rule name="sshd" dir=in action=allow protocol=TCP localport=22
+Start-Service sshd
+Set-Service sshd -StartupType Automatic
 ```
 
 make SSH-Key in Win10 by CMD
