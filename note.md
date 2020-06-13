@@ -138,6 +138,41 @@ ftp_proxy = http://id:pass@proxysrv:port/
 EOF
 ```
 
+## Numerical electric field calculation
+
+- Finite Difference method 差分法
+  - 領域を格子で分割しラプラスの式を差分の式に置き換えて
+  - 格子点の電位を未知数とする方程式を作る
+  - 近接点(格子点)の電位の関係式をもとにした方法
+  - $\phi_0$は$(x_0,y_0)$の電位
+  - $\phi_2$は$(x_2,y_0)$の電位
+  - $\phi_4$は$(x_0,y_4)$の電位
+
+$$ \frac{\partial \phi}{\partial x} = \frac{\phi_0 - \phi_2}{\delta x}, \frac{\phi_3 - \phi_0}{\delta x}, \frac{\phi_3 - \phi_2}{2 \delta x} $$
+
+- Finite Element method 有限要素法
+  - 領域を小部分の特性(面積・体積・電位)をベースとする
+  - 分割した部分が有限要素
+  - 分割した小部分の電位を簡単な関数で近似する
+  - 電界が座標の一次式であった場合
+    - 要素周辺の適当な点の電位の電位と座標の関数として表現される
+    - 領域全体の電位を節点の電位で形式的に表現できる
+    - 領域全体のポテンシャルも節点の電位により得られえる
+    - ポテンシャルが最小になる各点の電位を得る
+  - ラプラスの式がポテンシャル最小原理と等しい
+
+$$ \frac{\partial}{\partial x} {\frac{\partial f}{\partial(\frac{\partial \phi}{\partial x})}} + \frac{\partial}{\partial y} {\frac{\partial f}{\partial(\frac{\partial \phi}{\partial y})}} + \frac{\partial}{\partial z} {\frac{\partial f}{\partial(\frac{\partial \phi}{\partial z})}} - \frac{\partial f}{\partial \phi} = 0 $$
+
+$$ X(\phi) = \int\int\int f(x, y, z, \frac{\partial \phi}{\partial x}, \frac{\partial \phi}{\partial y}, \frac{\partial \phi}{\partial z}) dx dy dz$$
+
+- Surface Charge method SCM 表面電荷法
+  - 関係する領域内のすべての電荷の大きさと位置が決まれば
+  - クーロン式からどの点の電位・電界も与えることができる
+  - 境界要素法の一部
+  - R. F. Harrington Moment of Method
+
+- Charge Simulation method CSM 電荷重畳法
+
 ## Liquefaction of helium
 
 ヘリウムの液化に用いられる冷却方法
