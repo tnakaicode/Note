@@ -165,6 +165,34 @@ $$ \frac{\partial}{\partial x} {\frac{\partial f}{\partial(\frac{\partial \phi}{
 
 $$ X(\phi) = \int\int\int f(x, y, z, \frac{\partial \phi}{\partial x}, \frac{\partial \phi}{\partial y}, \frac{\partial \phi}{\partial z}) dx dy dz$$
 
+- ポテンシャルを最小にする電位分布が静電界
+  - 電位$\phi$を一次式で近似
+  - 要素内で電界が一定
+  - とみなせるほど各要素が十分小さい
+
+$$ \phi = \alpha_1 + \alpha_2 x + \alpha_3 y $$
+
+$$ \begin{aligned}
+  \phi_i &= \alpha_1 + \alpha_2 x_i + \alpha_3 y_i \\
+  \phi_j &= \alpha_1 + \alpha_2 x_j + \alpha_3 y_j \\
+  \phi_m &= \alpha_1 + \alpha_2 x_m + \alpha_3 y_m \\
+\end{aligned} $$
+
+$$ \phi = \frac{1}{2\delta} ( (a_i + b_i x + c_i y) \phi_i + (a_j + b_j x + c_j y) \phi_j + (a_m + b_m x + c_m y) \phi_m ) $$
+
+$$\begin{aligned}
+  a_i &= x_j y_m - x_m y_i \\
+  b_i &= y_j - y_m \\
+  c_i &= x_m - x_j \\
+\end{aligned}$$
+
+ポテンシャル$X_e$
+
+$$ X_e = \frac{\epsilon}{8 \delta} ((b_i \phi_i + b_j \phi_j + b_m \phi_m)^2 + (c_i \phi_i + c_j \phi_j + c_m \phi_m)^2) $$
+
+- 各要素のポテンシャルは各節点の電位$\phi_i$の二次式になる
+  - $\phi_i$を微分することで節点電位にお関する一次式が得られる
+
 - Surface Charge method SCM 表面電荷法
   - 関係する領域内のすべての電荷の大きさと位置が決まれば
   - クーロン式からどの点の電位・電界も与えることができる
