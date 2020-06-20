@@ -1,5 +1,11 @@
 # 1. NOTE SSH
 
+```bash
+# ssh autostart
+sudo update-rc.d ssh defaults
+sudo systemctl enable ssh.socket
+```
+
 ## 1.1. SSH for WSL on Win10
 
 A -> B
