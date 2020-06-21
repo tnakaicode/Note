@@ -138,6 +138,37 @@ ftp_proxy = http://id:pass@proxysrv:port/
 EOF
 ```
 
+## HVDC Transmission
+
+設備構成別
+
+|     | Classification                   | Uses                                 |
+| --- | -------------------------------- | ------------------------------------ |
+| 1   | Cable Link                       | 離島供給・海峡横断・国際連系         |
+| 2   | FC - Frequency Converter         |
+| 3   | BTB - Asynchronous Link          |
+| 4   | Long distance / Bulk power trans |
+| 5   | Interconnector                   | 緊急時応援・周波数調整               |
+| 6   | RES connectio                    | 洋上風力等再生可能エネルギー送電     |
+| 7   | Multi-Terminal: LCC              | 長距離電源送電・中間地点への電力供給 |
+| 8   | Multi-Treminal: VSC              | 再エネ電源の連系                     |
+
+変換器種別
+
+|     | 原理   | 変換器種類      | 用途                                   |
+| --- | ------ | --------------- | -------------------------------------- |
+| 1   | 他励磁 | 水銀整流器      |                                        |
+| 2   | 他励磁 | サイリスタ: ETT |                                        |
+| 3   | 他励磁 | サイリスタ: LTT | 系統間連系・中規模直流設備             |
+| 4   | 自励磁 | 2- / 3-Level    | 弱小系統連系                           |
+| 5   | 自励磁 | MMC             | 弱小系統連系・洋上風力・中規模直流設備 |
+| 6   | 他励磁 | 電源端: 他励磁  | 大規模電源送電の需要側の相互作用       |
+|     | 自励磁 | 受電端: 自励磁  |
+
+- ETT Electrically Triggered Thyristor
+- LTT Light Triggered Thyristor
+- MMC Modular Multi-Level Converter
+
 ## Numerical electric field calculation
 
 - Finite Difference method 差分法
