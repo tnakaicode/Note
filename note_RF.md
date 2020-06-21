@@ -343,7 +343,7 @@ Dierectric
         - $[ S ]^-1 [ L ]$ approximate a subset of continuous oprator $L^c$
         - $[ S ]^-1 [ L ]$ is independent of the choice of testing and basis functions
     - Construction of Basis for Quadrilateral
-      - $J_s = J_s^u *a_u + J_s^v *a_v$
+      - $J_s = J_s^u a_u + J_s^v a_v$
         - Surface Current
       - $J_s^u = 1/( J'_s(u,v) ) \sum {m=0,M} \sum_{n=0,N} {a_{mn}^u P_m(u) P_n(v)}$
         - $J'_s(u,v)$ : Jacobian
@@ -496,3 +496,10 @@ $$ \rm r(\rho, \phi, s) = \bm R(s) + \rho r_b(\phi, s) \{ \bm n(s)\cos(\phi) + \
 - $\bm r$ - radius-vector of arbitrary point inside waveguide
 - $\bm R(s)$ - equation of waveguide axis in Certesian coordinate
 - $n(s), b(s)$ - unit vectors of main normal and binormal axis of waveguide
+
+## 三極管制御
+
+![pic](./img/Triode.png)
+
+- 格子電圧が陰極電位よりわずかに負の場合でも
+  - 陽極側の電界が浸み込み、陰極表面の電界が正になる
