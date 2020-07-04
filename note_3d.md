@@ -1,14 +1,25 @@
-# 1. 3D CAD
+---
+title: 3D CAD
+---
+- [1. CATIA](#1-catia)
+- [2. OpenCASCADE](#2-opencascade)
+  - [2.1. CAD Assistant](#21-cad-assistant)
+  - [2.2. CAD Builder](#22-cad-builder)
+- [3. IFC Model](#3-ifc-model)
+- [4. 3D Data format](#4-3d-data-format)
+  - [4.1. STEP file](#41-step-file)
 
-## 1.1. CATIA
+## 1. CATIA
 
-## 1.2. OpenCASCADE
+## 2. OpenCASCADE
 
-## 1.3. CAD Assistant
+### 2.1. CAD Assistant
 
-## 1.4. IFC Model
+### 2.2. CAD Builder
 
-## 1.5. 3D Data format
+## 3. IFC Model
+
+## 4. 3D Data format
 
 - Neutral file formats: STEP, IGES, BREP
 - Native file formats*: CATIA V5, CATIA V6 / 3DExperience, Parasolid, CreoView, ACIS, JT, etc.
@@ -16,7 +27,7 @@
 - Finite Element Mesh (FEM) file formats: Nastran
 - Internal file format: XBF
 
-### STEP file
+### 4.1. STEP file
 
 STEP (AP203, AP214 and AP242)
 

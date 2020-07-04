@@ -1,6 +1,12 @@
-# Advaced Engineering Erectromagnetics (AdEM)
+---
+title: Advaced Engineering Erectromagnetics (AdEM)
+---
 
-## Important Chapter
+- [1. Important Chapter](#1-important-chapter)
+- [2. EFIE](#2-efie)
+- [3. Example 4-1](#3-example-4-1)
+
+## 1. Important Chapter
 
 1. Ch.5 Reflection and Transmission
    1. P.180
@@ -29,7 +35,7 @@
    1. P.743
    2. Ch.13.2.3 P753 Reflection from Surfaces
 
-## EFIE
+## 2. EFIE
 
 - Boundary Condition
   - PEC surface
@@ -39,7 +45,7 @@
     - Given
     - scatter field everywhere is due to J_s
 
-## Example 4-1
+## 3. Example 4-1
 
 Given:  
 $$ E = a_y ( E_0^{+}\exp(-j\beta z) + E_0^{-}\exp(+j\beta z) ) $$
