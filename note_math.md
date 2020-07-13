@@ -85,7 +85,7 @@ When $\sigma = 0$, it is a Dirac measure on the order of $\mu$.
 | $\neq$            | \neq            | $\equiv$           | \equiv           |
 | $\propto$         | \propto         | $\infty$           | \infty           |
 | $\partial$        | \partial        | $\nabla$           | \nabla           |
-| $\prep$           | \prep           | $\parallel$        | \parallel        |
+| $\perp$           | \perp           | $\parallel$        | \parallel        |
 | $\times$          | \times          | $\div$             | \div             |
 | $\cdot$           | \cdot           |
 | $\star$           | \star           | $\ast$             | \ast             |

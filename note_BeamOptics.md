@@ -2,8 +2,7 @@
 title: Influence of Emitter Surface Roughness and Emission inhomogeneity
 ---
 
-## Key components of Gyrotron
-
+- Key components of Gyrotron
 - investigate the influence of the quality of the emitter on the quality of electron beam nad gyrotron efficiency
 - KIT in house code
   - ESRAY
@@ -21,7 +20,7 @@ title: Influence of Emitter Surface Roughness and Emission inhomogeneity
   - consisit of the MIG and beam tunnels of gyrotron
   - generate a hollow electron beaqm for the cavity with sufficient traverse volicity $v_{T}$
 
-## MIG
+## 1. MIG
 
 MiG type
 | Diode                             | Triode                             |
@@ -48,6 +47,7 @@ $$ \begin{aligned}
 \end{aligned} $$
 
 - Dispenser emitter are desighned to work under temperature limited region
+- ディスペンサーエミッターは、温度が制限された領域で動作するように設計されています
 - The current density of thermionic emitter unde temperature limited region
   - can be described using Richardson-Dushman-eq with Schottky modification
 
@@ -56,9 +56,55 @@ $$ \begin{aligned}
     \Delta W &= \frac{e^3 E}{4\pi\epsilon_0}
 \end{aligned} $$
 
+- $E$ is the electric field on the emitter surface
 - $k_B$ is Boltsmann constant
 - $A_g = \lambda_R A_0 A_0$ is universal constant $=1.20173 10^6 Am-2K-2$
 - $\lambda_R$ is a material-specific correction effect is typically 0.5
 - When to set $\Delta W = 0$,
   - if Schottky effect is not taken into account
   - which means the influence of electric field in neglacted
+
+- Typically working temperatures of thermonic emitter are around 1000 degree.
+- As such high temperature and additional strong electric field,
+  - electrons can overcome the surface barrier and,
+  - can escape from the emitter surface.
+- Typycally current density on emitter surface on morden cathodes
+  - is in a range from 1 A/cm^2 ~ 5A/cm^2.
+- The beam current is adjusted by
+  - the tempareture of the emitter and the emitter source.
+
+- After electrons leave the emitter,
+  - their movemonets will be affected by
+    - the electric field and magnetic field
+    - Lorentzs force equation
+
+$$ F = -e (E + v \times B) $$
+
+- the electron gyrating around the guideing magnetic field.
+- the magnetic field force only charges the direction of electrons and
+  - it will not change the energy of the electron
+- The Larmour radius
+  - the distance between the actual spiral trajectory and
+  - the guiding centre of gyrating electron
+
+$$ r_L = \frac{\gamma m_e v_{\perp}}{e B} $$
+
+- $\gamma=1/\sqrt{1-\beta^2}$: Lorentzs factor
+- $\beta$ is velocity of electron in gyrotron
+  - normalized to the speed of light
+
+$$ \beta = \frac{v}{c_0} $$
+
+- At the beginning og movements
+  - the electron will be accelerated by anode voltage to
+  - high axial velocity component $\beta_{\parallel}$
+  - low rotational velocity component $\beta_{\perp}$
+- Electron gyrate along the magnetic field lines
+  - after the acceleration
+  - come up with smoothly incresing magnetic field
+- According Bosch's theorem
+  - relation between radius $r_b$ and magnetic field
+
+$$ \frac{r_b(z_2)}{r_b (z_1)} \approx \sqrt{\frac{B(z_1)}{B(z_2)}} $$
+
+## 2. Cavity
