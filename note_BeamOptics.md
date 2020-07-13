@@ -134,3 +134,21 @@ $$ \frac{r_b(z_2)}{r_b (z_1)} \approx \sqrt{\frac{B(z_1)}{B(z_2)}} $$
         - due to the relativistic effect
     - When the electron is in Right Position
       - the electron is accelerating by electric field and $\Omega_c$ will decrease
+
+## Key-Word
+
+- CVC Current Voltage Charactristics
+- Tonnerre model
+  - smooth transition between
+    - the space charge limited region and
+    - the temperature limited region of CVC curve
+  - results from the work function distribution of the emitter
+
+## Program
+
+- quasi-static PIC (Particle in Cell)
+  - QuickPIC <https://github.com/UCLA-Plasma-Simulation-Group/QuickPIC-OpenSource.git>
+    - Fortran
+  - ESPIC
+    - Gyrotron electron gun and collector simulation with ESRAY beam optics code
+- ARIADNE
