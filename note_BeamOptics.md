@@ -108,3 +108,29 @@ $$ \beta = \frac{v}{c_0} $$
 $$ \frac{r_b(z_2)}{r_b (z_1)} \approx \sqrt{\frac{B(z_1)}{B(z_2)}} $$
 
 ## 2. Cavity
+
+- After the electron have reached the cavity region along the magnetic fied line
+  - the cyclotron interaction will take place
+  - the electro-magnetic field in cylindical waveguide is descrived by
+    - TE and TM mode
+  - TM Mode
+    - the travaerse field component
+    - $E_{\phi}$,$E_{r}$ vanish in a long cavity
+    - with resonance close to cut-off
+    - Consequently,
+    - no-efficient energy exchange with traverse velocity component of electron is possible.
+    - Stable and efficietn gyrotorn operation is only possible TE modes.
+    - beacause
+    - their traverse field component do not vanish.
+  - TE Mode
+    - electron can both accelerated and deaccelerated during their gyration
+    - typical position of gyrating electron in electric field
+      - decelerating: Left
+      - accelerating: Right
+    - When the electron is in Left Position
+      - deccelerated by the electric field of microwaves and lose energy to the field
+      - decrease the velocity, Lorentzs factor $\gamma$ will decrease
+      - the angular frequncy of electron $\Omega_c = 2\pi f_{ce}$ will increase
+        - due to the relativistic effect
+    - When the electron is in Right Position
+      - the electron is accelerating by electric field and $\Omega_c$ will decrease
