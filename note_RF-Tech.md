@@ -1,4 +1,6 @@
-# RF
+---
+title: RF Tech
+---
 
 Dielectric constant of lossy medium
 $$ \epsilon_r = \epsilon_r^{\prime} - j\epsilon_r^{\prime\prime} $$
