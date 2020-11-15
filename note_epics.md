@@ -21,3 +21,30 @@ export EPICS_EXTENSIONS=$HOME/epics-base/modules/
 export PATH=$PATH:$EPICS_BASE/bin/$EPICS_HOST_ARCH
 export PATH=$PATH:$EPICS_EXTENSIONS/bin/$EPICS_HOST_ARCH
 ```
+
+```bash
+makeBaseApp.pl -t example example
+makeBaseApp.pl -i -t example example
+make
+
+cd iocBoot/iocexample
+chmod +x st.cmd
+./st.cmd
+```
+
+ioc service
+
+```text
+[Unit]
+Description=EPICS IOC Example
+After=network.service
+
+[Service]
+Type=simple
+Restart=on-success
+Pre
+ExecStart=/home/rpi/ioc-example/iocBoot/iocexample/st.cmd
+
+[Install]
+WantedBy=multi-user.target
+```
