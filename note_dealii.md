@@ -13,3 +13,7 @@ cmake -DDEAL_II_WITH_PETSC=OFF -DDEAL_II_PETSC_WITH_COMPLEX=OFF -DDEAL_II_WITH_P
 ```
 
 ## Step-61 Weak Galerkin scheme
+
+## with OpenFOAM
+
+- https://medium.com/@mustafaabbs2/setting-up-a-fluid-structure-interaction-workflow-with-openfoam-and-deal-ii-80718f2e2e0e
