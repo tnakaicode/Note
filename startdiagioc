@@ -1,0 +1,14 @@
+#!/bin/sh
+
+TOP=/home/project/applications
+APPLICATION=instrumentation
+BASE=/usr/local/epics/base
+HOST_ARCH=linux-x86
+PATH=/bin:/usr/bin:${BASE}/bin/${HOST_ARCH}
+
+# start caRepeater
+startCArepeater  > /dev/null 2>&1
+
+# start ioc app
+cd $TOP/iocBoot/ioc$APPLICATION
+./st.cmd

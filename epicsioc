@@ -1,0 +1,19 @@
+#!/bin/sh
+
+EPICSUSER=linuxioc
+case "$1" in
+        start)
+                echo  "Starting EPICS IOC "
+                su - $EPICSUSER -c 'screen -d -m /usr/local/bin/startdiagioc' &
+                ;;
+        stop)
+                for i in `/bin/ps h o pid -u $EPICSUSER`; do
+                        kill -s SIGKILL $i > /dev/null 2>&1
+                done
+                ;;
+        *)
+                echo "Usage: $0 {start | stop}"
+                exit 1
+esac
+
+exit 0
