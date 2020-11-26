@@ -48,3 +48,29 @@ ExecStart=/home/rpi/ioc-example/iocBoot/iocexample/st.cmd
 [Install]
 WantedBy=multi-user.target
 ```
+
+<http://cerldev.kek.jp/trac/EpicsUsersJP/wiki/epics/bbb/epics_ioc>
+
+```bash
+[Unit]
+Description=start IOC via procserv
+Requires=network.target
+After=network.target auditd.service
+ConditionFileIsExecutable=/usr/bin/procServ
+ConditionFileIsExecutable=/usr/local/ops/iocBoot/ioccontrol/st.cmd
+ConditionDirectoryNotEmpty=/usr/local/ops
+RequiresMountsFor=/usr/local/epics /usr/local/ops
+
+[Service]
+EnvironmentFile=-/usr/local/ops/etc/epics.env
+ExecStart=/usr/bin/procServ -f -L /usr/local/ops/var/procioc.log -p
+/run/ioc.pid -l $PROCSERV_REMOTE_PORT $PROCSERV_LOCAL_PORT
+/usr/local/ops/iocBoot/ioccontrol/st.cmd
+ExecStop=/bin/kill -9 ` cat /run/ioc.pid`
+KillMode=process
+Restart=on-failure
+User=ioc
+
+[Install]
+WantedBy=multi-user.target
+```
