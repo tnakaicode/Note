@@ -81,19 +81,19 @@ When $\sigma = 0$, it is a Dirac measure on the order of $\mu$.
 | $\pm$             | \pm             | $\mp$              | \mp              |
 | $\leq$            | \leq            | $\geq$             | \geq             |
 | $\sim$            | \sim            | $\simeq$           | \simeq           |
-| $\approx$         | \approx         |
+| $\approx$         | \approx         |                    |                  |
 | $\neq$            | \neq            | $\equiv$           | \equiv           |
 | $\propto$         | \propto         | $\infty$           | \infty           |
 | $\partial$        | \partial        | $\nabla$           | \nabla           |
 | $\perp$           | \perp           | $\parallel$        | \parallel        |
 | $\times$          | \times          | $\div$             | \div             |
-| $\cdot$           | \cdot           |
+| $\cdot$           | \cdot           |                    |                  |
 | $\star$           | \star           | $\ast$             | \ast             |
 | $\circ$           | \circ           | $\bullet$          | \bullet          |
-| $\diamond$        | \diamond        |
+| $\diamond$        | \diamond        |                    |                  |
 | $\triangle$       | \triangle       | $\triangledown$    | \triangledown    |
 | $\bigtriangleup$  | \bigtriangleup  | $\bigtriangledown$ | \bigtriangledown |
-| $\square$         | \square         | $\bigcirc$            | \bigcirc            |
+| $\square$         | \square         | $\bigcirc$         | \bigcirc         |
 | $\leftarrow$      | \leftarrow      | $\rightarrow$      | \rightarrow      |
 | $\Leftarrow$      | \Leftarrow      | $\Rightarrow$      | \Rightarrow      |
 | $\leftrightarrow$ | \leftrightarrow | $\Leftrightarrow$  | \Leftrightarrow  |
@@ -104,10 +104,10 @@ When $\sigma = 0$, it is a Dirac measure on the order of $\mu$.
 | $\updownarrow$    | \updownarrow    | $\Updownarrow$     | \Updownarrow     |
 | $\nearrow$        | \nearrow        | $\searrow$         | \searrow         |
 | $\swarrow$        | \swarrow        | $\nwarrow$         | \nwarrow         |
-| $\angle$          | \angle          |
-| $\flat$           | \flat           |
+| $\angle$          | \angle          |                    |                  |
+| $\flat$           | \flat           |                    |                  |
 | $\natural$        | \natural        | $\sharp$           | \sharp           |
-| $\backslash$      | \backslash      |
+| $\backslash$      | \backslash      |                    |                  |
 | $\clubsuit$       | \clubsuit       | $\diamondsuit$     | \diamondsuit     |
 | $\heartsuit$      | \heartsuit      | $\spadesuit$       | \spadesuit       |
 | $\dagger$         | \dagger         |
