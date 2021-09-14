@@ -219,10 +219,10 @@ Dierectric
 ### Coaxial Waveguide
 
 - WG Mode
-  - Eigenmodes: $e_{mn}$
-  - Basis Function at WG aperture: $\hat{Z} \times e_{mn}$
-  - Wave Admittance: $Y_{mn}$
-  - $\beta$ is imaginary part of Propagation Constant $\gamma=\alpha + j\beta$
+  - Eigenmodes: $e_{mn}$.
+  - Basis Function at WG aperture: $\hat{Z} \times e_{mn}$.
+  - Wave Admittance: $Y_{mn}$.
+  - $\beta$ is imaginary part of Propagation Constant $\gamma=\alpha + j\beta$.
   - TE
     - $$ e_{mn}^{TM} = -\nabla_t \Phi_{mn}$$
     - $$ Y_{mn}^{TM} = \frac{H_y}{E_x} = \frac{\beta}{\omega\mu_0} $$
