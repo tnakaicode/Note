@@ -97,8 +97,8 @@ $$ \beta = \frac{v}{c_0} $$
 
 - At the beginning og movements
   - the electron will be accelerated by anode voltage to
-  - high axial velocity component $\beta_{\parallel}$
-  - low rotational velocity component $\beta_{\perp}$
+  - high axial velocity component $\beta_{\parallel}$.
+  - low rotational velocity component $\beta_{\perp}$.
 - Electron gyrate along the magnetic field lines
   - after the acceleration
   - come up with smoothly incresing magnetic field
