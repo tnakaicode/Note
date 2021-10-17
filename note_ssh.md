@@ -2,6 +2,7 @@
 
 ```bash
 # ssh autostart
+sudo apt install openssh-server
 sudo update-rc.d ssh defaults
 sudo systemctl enable ssh.socket
 ```
