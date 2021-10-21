@@ -68,3 +68,28 @@ SVDは、自然周波数に加えて、時間領域の電流分布を特徴づ�
 git clone https://github.com/ljvmiranda921/pyswarms.git
 gti clone https://github.com/tnakaicode/for90-mom2.git
 ```
+
+## Moment of Method in electromagnetics
+
+- <https://github.com/topics/method-of-moments>
+  - <https://github.com/steverab/tensor-gmm.git>
+  - <https://github.com/RedBlight/EFVIE-MoM.git>
+  - <https://github.com/eattardo/efie-2d.git>
+  - <https://github.com/michaelprichardson/mom_python.git>
+  - <https://github.com/EhsanKA/Mixture_MMSD.git>
+- <http://www.lmn.pub.ro/~daniel/ElectromagneticModelingDoctoral/Books/BEM%20MoM/Gibson%20MoM%20in%20Electromagnetics.pdf>
+- <https://dev.tvbox.am/meouen/method-of-moments-electromagnetics-python>
+- <https://www.matecdev.com/posts/differences-fdtd-fem-mom.html>
+  - FDTD/FEM/BEM(MoM)
+  - FDTD / Differential equation / Volumetric domain / Non-linear, anisotropic
+    - Meep / GPL / C++ / Python, Scheme, C++ / MPI
+    - gprMax / GPL / Python+Cython / Python / CUDA, MPI
+    - OpenEMS / GPL / C++ / Matlab/Octave / MPI
+  - FEM / Variational form / Volumetric domain / Non-linear, anisotropic, multi-physics
+    - FEniCS / LGPL / C++ / Python, C++ / MPI
+    - Elmer FEM / LGPL / Fortran / MPI
+    - FreeFEM / LGPL / C++ / Own language / MPI
+  - MoM/BEM / Integral equations / Surface currents / Linear, piecewise homogeneous
+    - Bempp / MIT / Python+OpenCL/Numba / Python, C++ / Gmsh, meshio / Shared memory
+    - PumaEM / GPLv3 / Python/C++ / Python / Gmsh, GiD, Ansys, VRML / MPI
+    - NEC-2 / GPLv2 / C++ / C/C++/Python/Ruby / Antenna parameters / Single-threaded?
