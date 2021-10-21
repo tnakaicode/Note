@@ -80,6 +80,31 @@ gti clone https://github.com/tnakaicode/for90-mom2.git
 - <http://www.lmn.pub.ro/~daniel/ElectromagneticModelingDoctoral/Books/BEM%20MoM/Gibson%20MoM%20in%20Electromagnetics.pdf>
 - <https://dev.tvbox.am/meouen/method-of-moments-electromagnetics-python>
 - <https://www.matecdev.com/posts/differences-fdtd-fem-mom.html>
+- <http://www.e-em.co.jp/index.html>
+  - EEM-FDM Ver.5.1
+    - 差分法を用いた電磁界シミュレーター
+    - 広い周波数(準静電界から光まで)の各種用途に使える汎用ツール
+  - EEM-MOM Ver.5.2
+    - モーメント法を用いた電磁界シミュレーター
+    - 線状・面状アンテナの解析に最適
+  - EEM-RTM Ver.5.1
+    - レイトレーシング法を用いた電波伝搬シミュレーター
+    - 市街地や建物内の広い領域での電界分布の高速計算
+  - EEM-STF Ver.5.1
+    - 差分法による静電界シミュレーター
+    - 電極と誘電体から成る系の電圧と電界分布の計算
+  - OpenFDTD Ver.2.6.3 new
+    - FDTD法を用いた電磁界シミュレーター
+    - 電磁界の各種用途に使える高速汎用ツール
+  - OpenTHFD Ver.1.4.3 new
+    - 差分法を用いた電磁界シミュレーター
+    - 電磁界の広い周波数(準静電界から光まで)の各種用途に使える汎用ツール
+  - OpenMOM Ver.1.9.1
+    - モーメント法を用いた電磁界シミュレーター
+    - 線状・面状アンテナの解析に最適
+  - OpenSTF Ver.1.7.1
+    - 差分法による静電界シミュレーター
+    - 電極と誘電体から成る系の電圧と電界分布の計算
 
 - FDTD    / Differential equation / Volumetric domain / Non-linear, anisotropic
 - FEM     / Variational form      / Volumetric domain / Non-linear, anisotropic, multi-physics
