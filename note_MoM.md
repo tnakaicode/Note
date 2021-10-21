@@ -80,16 +80,23 @@ gti clone https://github.com/tnakaicode/for90-mom2.git
 - <http://www.lmn.pub.ro/~daniel/ElectromagneticModelingDoctoral/Books/BEM%20MoM/Gibson%20MoM%20in%20Electromagnetics.pdf>
 - <https://dev.tvbox.am/meouen/method-of-moments-electromagnetics-python>
 - <https://www.matecdev.com/posts/differences-fdtd-fem-mom.html>
-  - FDTD/FEM/BEM(MoM)
-  - FDTD / Differential equation / Volumetric domain / Non-linear, anisotropic
-    - Meep / GPL / C++ / Python, Scheme, C++ / MPI
-    - gprMax / GPL / Python+Cython / Python / CUDA, MPI
-    - OpenEMS / GPL / C++ / Matlab/Octave / MPI
-  - FEM / Variational form / Volumetric domain / Non-linear, anisotropic, multi-physics
-    - FEniCS / LGPL / C++ / Python, C++ / MPI
-    - Elmer FEM / LGPL / Fortran / MPI
-    - FreeFEM / LGPL / C++ / Own language / MPI
-  - MoM/BEM / Integral equations / Surface currents / Linear, piecewise homogeneous
-    - Bempp / MIT / Python+OpenCL/Numba / Python, C++ / Gmsh, meshio / Shared memory
-    - PumaEM / GPLv3 / Python/C++ / Python / Gmsh, GiD, Ansys, VRML / MPI
-    - NEC-2 / GPLv2 / C++ / C/C++/Python/Ruby / Antenna parameters / Single-threaded?
+
+- FDTD    / Differential equation / Volumetric domain / Non-linear, anisotropic
+- FEM     / Variational form      / Volumetric domain / Non-linear, anisotropic, multi-physics
+- MoM/BEM / Integral equations    / Surface currents  / Linear, piecewise homogeneous
+
+FDTD/FEM/BEM(MoM)
+|           |       |                     |                     |                        |                  |
+| --------- | ----- | ------------------- | ------------------- | ---------------------- | ---------------- |
+| **FDTD**  |       |                     |                     |                        |                  |
+| Meep      | GPL   | C++                 | Python, Scheme, C++ |                        | MPI              |
+| gprMax    | GPL   | Python+Cython       | Python              |                        | CUDA, MPI        |
+| OpenEMS   | GPL   | C++                 | Matlab/Octave       |                        | MPI              |
+| **FEM**   |       |                     |                     |                        |                  |
+| FEniCS    | LGPL  | C++                 | Python, C++         |                        | MPI              |
+| Elmer FEM | LGPL  | Fortran             |                     |                        | MPI              |
+| FreeFEM   | LGPL  | C++                 | Own language        |                        | MPI              |
+| **MoM**   |       |                     |                     |                        |                  |
+| Bempp     | MIT   | Python+OpenCL/Numba | Python, C++         | Gmsh, meshio           | Shared memory    |
+| PumaEM    | GPLv3 | Python/C++          | Python              | Gmsh, GiD, Ansys, VRML | MPI              |
+| NEC-2     | GPLv2 | C++                 | C/C++/Python/Ruby   | Antenna parameters     | Single-threaded? |
