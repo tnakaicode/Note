@@ -51,7 +51,7 @@ conda install -c conda-forge pythonocc-core=7.4.0
 - conda install -c laughlinresearch pyocct
   - python=3.6.7
 
-```Markdown
+```bash
 conda install -c conda-forge pyopengl tk freetype vtk freeglut tbb mayavi sdl2
 conda install -c dlr-sc freeimage freeimageplus gl2ps
 conda install -c intel libpng tcl

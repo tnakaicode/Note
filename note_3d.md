@@ -7,7 +7,8 @@ title: 3D CAD
   - [2.2. CAD Builder](#22-cad-builder)
 - [3. IFC Model](#3-ifc-model)
 - [4. 3D Data format](#4-3d-data-format)
-  - [4.1. STEP file](#41-step-file)
+  - [4.1. STEP fromat](#41-step-fromat)
+  - [4.2. STEL format](#42-stel-format)
 
 ## 1. CATIA
 
@@ -27,7 +28,7 @@ title: 3D CAD
 - Finite Element Mesh (FEM) file formats: Nastran
 - Internal file format: XBF
 
-### 4.1. STEP file
+### 4.1. STEP fromat
 
 STEP (AP203, AP214 and AP242)
 
@@ -41,3 +42,5 @@ STEP (AP203, AP214 and AP242)
   - file information
   - dimensions
   - tolerances (semantic and tesellated PMI).
+
+### 4.2. STEL format

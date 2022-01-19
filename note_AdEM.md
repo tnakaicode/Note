@@ -1,5 +1,5 @@
 ---
-title: Advaced Engineering Erectromagnetics (AdEM)
+title: Advaced Engineering Electromagnetics (AdEM)
 ---
 
 - [1. Important Chapter](#1-important-chapter)

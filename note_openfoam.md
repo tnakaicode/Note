@@ -2,7 +2,7 @@
 
 ## Build
 
-```markdown
+```bash
 # OpenFOAM-Plus
 git clone https://develop.openfoam.com/Development/OpenFOAM-plus.git
 cd OpenFOAM-plus

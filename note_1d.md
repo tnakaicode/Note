@@ -1,4 +1,6 @@
-# 1. 1D CAE
+---
+title: 1D CAE
+---
 
 ## 1.1. OpenModelica
 
