@@ -138,7 +138,7 @@ Dierectric
 | Distrilled Water |            80 |         4.0E-2 |
 |    Sea Water     |            81 |           4.62 |
 
-## RF Device
+## 1. RF Device
 
 - ミリ波回路デバイス
 - 周波数変換器
@@ -180,9 +180,9 @@ Dierectric
   - Frequnecy Modulation 発振器の周波数変調
     - Digital Control Oscillator デジタル制御
 
-## Waveguide
+## 2. Waveguide
 
-### Rectanguler Waveguide
+### 2.1. Rectanguler Waveguide
 
 <https://www.everythingrf.com/tech-resources/waveguides-sizes>
 ![waveguide](./img/waveguide.jpg)
@@ -200,7 +200,7 @@ Dierectric
   - EIA - Electronic Industries Alliance
   - RCSC - Radio Components Standardization Committee
 
-### Circuler Waveguide
+### 2.2. Circuler Waveguide
 
 - [waveguide](https://www.qwed.eu/CircularWaveguides.pdf)
 - Cutoff
@@ -214,9 +214,9 @@ Dierectric
 - $TM_{01}$ mode
   - $$ f_{c, TM_{0, 1}} = \frac{c}{2 \pi} \beta_{c, TM_{0, 1}} = \frac{c}{2 \pi} \frac{\chi_{0, 1}}{a}$$
 
-### Corrugated Circuler Waveguide
+### 2.3. Corrugated Circuler Waveguide
 
-### Coaxial Waveguide
+### 2.4. Coaxial Waveguide
 
 - WG Mode
   - Eigenmodes: $e_{mn}$.
@@ -263,7 +263,7 @@ Dierectric
   - TEM
     - $$ e^{TEM} = - \hat{\rho} \frac{1}{\rho\sqrt{2\pi \ln(c)}}$$
 
-## Optics
+## 3. Optics
 
 - Field Expressions for the Electric and Magnetic short dipoles
 - well known (e.g. [Stratton, 1941] or [Hansen, 1988].
@@ -285,9 +285,9 @@ Dierectric
   - $$ b = \frac{20 \log_{10}((1+\cos\theta)/2) - A}{20k(1-\sin\theta)\log_{10}e} $$
   - $$ A = 20 \log_{10}((1+\cos\theta)/2) - 20bk(1-\sin\theta)\log_{10}e$$
 
-### Gaussian Optics
+### 3.1. Gaussian Optics
 
-## MoM
+## 4. MoM
 
 - The integral equation used for PEC objects is known
   - as the Mixed-Potential Electric Field Integral Equation (EFIE) formulation.
@@ -392,7 +392,7 @@ Dierectric
         - good choise is Euclidean norm of each basis function
       - Property of Expansion
 
-### Circularly polarized antenna
+### 4.1. Circularly polarized antenna
 
 TE Mode: The electric field is perpendicular to the propagation direction, and there is no electric field component in the propagation direction.
 In the xz-plane, the composition of $H_x$ and $H_y$ is oblique with respect to the z-axis, so the Poynting Vector is oblique with respect to the z-axis. The propagating wave travels while repeating reflection on the wall surface of the waveguide.
@@ -454,7 +454,7 @@ $$ AR = \sqrt{\frac{|E_x|^2 \cos^2(\tau) + |E_x||E_y| \sin(2\tau)\cos(\delta) + 
 AR may be displayed in db. $AR<3Db$ is often circularly polarized, but AR is closely related to the cross-polarization discrimination XPD, which indicates the magnitude of the difference between the main polarization and cross-polarization.
 The evaluation value of AR should be determined taking into account the effect of polarization loss between the transmitting and receiving antennas.
 
-## Irregular Waveguide
+## 5. Irregular Waveguide
 
 Gyro-K, Opti-K, Gyro-KL
 
@@ -499,7 +499,7 @@ $$ \rm r(\rho, \phi, s) = \bm R(s) + \rho r_b(\phi, s) \{ \bm n(s)\cos(\phi) + \
 - $\bm R(s)$ - equation of waveguide axis in Certesian coordinate
 - $n(s), b(s)$ - unit vectors of main normal and binormal axis of waveguide
 
-## 三極管制御
+## 6. 三極管制御
 
 ![pic](./img/Triode.png)
 
@@ -523,7 +523,7 @@ $$ \rm r(\rho, \phi, s) = \bm R(s) + \rho r_b(\phi, s) \{ \bm n(s)\cos(\phi) + \
   - 格子電流の流れる回路を形成
   - 入力抵抗くを高く保ったままにするため高い格子抵抗を加える
 
-## GTD Geometrical Theory of Diffraction
+## 7. GTD Geometrical Theory of Diffraction
 
 - 回折波を励振する入射・表面反射が幾何学的な散乱体の形状により作られる影境界(Shadown Boundary)の近くで界が発散する
 - 回折界のスペクトル積分表示において
@@ -540,3 +540,247 @@ $$ \rm r(\rho, \phi, s) = \bm R(s) + \rho r_b(\phi, s) \{ \bm n(s)\cos(\phi) + \
     - 平面波が導体平板に設けられた方形溝に入射した場合
     - 溝の開口が波長に比べて大きいとき
     - 溝内の底部に向かって並行平板導波管モードあるいは開放型の共振器モードが励振する
+
+## 8. Directive Coupler
+
+高周波信号の分離・融合・結合を行う。
+
+- 高周波パワーのモニタリング
+- 高周波信号源のモニタリング
+- 高周波信号源の安定化
+- 高周波の伝送・反射測定
+
+重要な特性の一つは、入射波と反射波にどの程度分離できるかどうかにある。
+
+## 9. Frequency Band
+
+Frequency Band
+| Name |           Mean |          freq band |               日本語 |
+| ---- | -------------: | -----------------: | -------------------: |
+| VLF  |       Very Low |     3.0 ~ 30.0 kHz |                 長波 |
+| LF   |            Low |   30.0 ~ 300.0 kHz |                 長波 |
+| MF   |         Medium | 300.0 ~ 3000.0 kHz |                 中波 |
+| HF   |           High |     3.0 ~ 30.0 MHz |                 短波 |
+| VHF  |      Very High |   30.0 ~ 300.0 MHz |               超短波 |
+| UHF  |     Ultra High | 300.0 ~ 3000.0 MHz | 極超短波(マイクロ波) |
+| SHF  |     Super High |     3.0 ~ 30.0 GHz | センチ波(マイクロ波) |
+| EHF  | Extremely High |   30.0 ~ 300.0 GHz |               ミリ波 |
+|      |                | 300.0 ~ 3000.0 GHz |           サブミリ波 |
+
+## 10. Micro Wave Band
+
+IEEE-Band
+| -Band     |          freq |
+| --------- | ------------: |
+| L  - band | 1   ~ 2   GHz |
+| S  - band | 2   ~ 4   GHz |
+| C  - band | 4   ~ 8   GHz |
+| X  - band | 8   ~ 12  GHz |
+| Ku - band | 12  ~ 18  GHz |
+| K  - band | 18  ~ 27  GHz |
+| Ka - band | 27  ~ 40  GHz |
+| V  - band | 40  ~ 75  GHz |
+| W  - band | 75  ~ 110 GHz |
+| mm - band | 110 ~ 300 GHz |
+
+Waveguide-Band
+|     Band |          freq |
+| -------: | ------------: |
+| Q - band | 33  ~ 50  GHz |
+| U - band | 40  ~ 60  GHz |
+| V - band | 50  ~ 75  GHz |
+| E - band | 60  ~ 90  GHz |
+| W - band | 75  ~ 110 GHz |
+| F - band | 90  ~ 140 GHz |
+| D - band | 110 ~ 170 GHz |
+| G - band | 140 ~ 220 GHz |
+| H - band | 170 ~ 260 GHz |
+| J - band | 220 ~ 325 GHz |
+| Y - band | 325 ~ 500 GHz |
+
+1. 高周波損失
+   1. 表皮効果
+      1. 断面が円形の導体に高周波電流を流すと磁束が時間的に変化する
+      2. 磁束の変化により電流とは逆向きに起電力が発生する
+      3. 磁束の変化により生じる逆起電力は導体の中心部ほど強くなる
+         1. 導体の内部の電流は、表面が最大で中心部に向かうほど急激に減少する
+         2. 電流の流れる有効断面積が導体の断面積より小さくなる
+   2. 放射損
+      1. 機器を2本の導線で結ぶと、ループアンテナとなって電磁波を放射し損失が起きる
+2. 伝送機器
+   1. レッヘル線
+   2. 同軸線路
+   3. ストリップ線路
+      1. トリプレート線路
+      2. マイクロストリップ線路
+   4. 導波管
+   5. コプレナ線路
+   6. 表面波線路
+
+電磁波の形状
+| Mode | Ez  | Hz  |
+| ---- | --- | --- |
+| TEM  | 0   | 0   |
+| TE   | 0   | -   |
+| TM   | -   | 0   |
+
+- 電導率
+  - Conductivity $\sigma [S/m]$.
+- 抵抗率
+  - Resisitivity $\rho [\Omega \cdot m] = 1 / \sigma$.
+- 誘電率
+  - Dielectric constant
+
+- 電波吸収体
+  - 電波吸収体の整合法(反射をなくす方法)
+  - 電磁波を吸収するための損失は電導性によって得るのが良い
+  - 電気的損失材
+    - 導電性損失材
+    - 誘電性損失材
+  - 磁気的損失材
+  - 媒質の屈折率は$\sqrt{\epsilon_r \mu_r}$で与えられる
+  - もし$\epsilon_r \approx \mu_r$の特性が実現できれば
+    - 反射波がほとんど生じず、入射波はすべて吸収材に入り込んで吸収される
+  - 高透磁率フェライト焼結体の周波数分散を利用した吸収材
+    - VHF~UHFで波長の数百分の1の極薄膜で広帯域吸収材が期待できる
+
+- 液体の帯電機構
+  - 2つの固体が摩擦すれば帯電する
+    - 接触電位の差による
+    - 接触時の両表面の電気容量は非常に大きい
+    - 2つの固体を引き離すと各表面の荷電量が変わらないため電気容量が急激に小さくなる
+    - これにより
+    - 帯電電圧は非常に高くなる
+  - 異種の表面を密接に接触させた状態から引き離せば静電帯電が生まれる
+  - 液体が容器壁に接触するとき
+    - 接触電位差によって接触面に電気的二重層が生まれる
+  - 液体が容器壁から離れるとき
+    - 液体は荷電をもって離れる
+  - 荷電をもった液体が絶縁状態にある容器に入る
+    - 液体の荷電は液体の流動性によって拡散し、容器壁面に移る
+    - 容器自体が帯電し高い静電電圧を示すようになる
+    - この容器に他の接地体が近づくと放電し火点になる可能性がある
+  - 帯電している状態は、電荷バランスが崩れた状態
+  - 絶縁物は、ある部分は２０KVでも、ある部分は１KVということがありえる
+  - 絶縁物は他の物体と軽く接触しただけで簡単に電荷を持つ
+    - 表面に持った電荷は簡単には移動しない
+  - 単極性帯電現象
+  - 双極性帯電現象
+  - 流動帯電
+
+- LASER
+  - Light Amplifiction by Stimulated Emission of Radition
+  - ある媒質から固有にエネルギー準位から誘導放射される光によって、光を増幅する
+    - コヒーレント
+      - インコヒーレント：非干渉
+    - 単色
+    - 高輝度
+  - 発振波長が媒質のエネルギー準位で規定される
+    - 周波数変調のためには媒質そのものを変える必要がある
+  - 自由電子レーザーFEL
+    - 電子ビームが静磁場と電磁波の場との共鳴的な相互作用で誘導放射する
+  - 自由電子による電磁波放射の素過程
+    - シンクロトロン放射
+    - 制動放射
+    - コンプトン散乱
+    - チェレンコフ放射
+    - スミス・パーセル放射
+  - 誘導放射により増幅する
+    - 電子ビームの速度と電磁波の位相速度がほぼ同じ大きさである必要がある
+    - 電子から電磁場へのエネルギー授受
+  - 自由空間において電磁場の位相速度は光速cのため電子ビームと電磁波の相互作用は起きない
+    - 電磁波の位相速度を光速以下にする
+      - 誘電体
+      - 遅延回路
+    - 電子ビームに周期的摂動を与えて電子のエネルギーと運動量の関係(分散)を変える
+
+- 自由電子による電磁波放射の素過程
+  - 通常、電磁波の波面は球面か平面である
+  - 螺旋状の波面を持つ光渦というものがある
+  - 軌道角運動量
+  - 特殊な平板やフィルタを用いて実現する
+  - 円偏光アンジュレータの高次光が螺旋状の波面を持つ
+
+- Latch回路
+  - 1bitの情報を保持できる回路
+  - 順序論理回路
+    - 以前の入力状態を記録し、入力信号に対する出力信号が変わる回路
+
+- VCB
+  - Vacuum Circuit Breaker
+  - 真空遮断器
+  - 原理
+    - 高真空の容器に電極が入っている
+    - 高電圧の電路を遮断する際に、電極から蒸発した粒子と電子によりアークが発生する
+      - 電極を高真空中に収めることで、アークを構成する粒子が拡散してしまうために、アークが消滅する
+    - コンデンサに電圧を貯めておき、信号が来たところでソレノイドに放電し、電極を引き離している
+      - ソレノイドの動作に必要な電圧：遮断電圧
+  - 動作しなくなる要因として考えられるもの
+    - 盤内に入れることでコンデンサとソレノイド間に誘導電圧が生じ、コンデンサの電圧がソレノイドの動作電圧を超えることが出来ずに動作しなかった可能性がある
+    - 動作している中でソレノイドの動作電圧が上がった可能性がある
+    - コンデンサの充電性能が落ちている可能性がある
+
+- PCV
+  - Positive Crankcase Ventilation
+
+- PCB
+  - Poly Chlorinated Biphenyl
+  - ポリ塩化ビフェニル
+  - 製造・輸入ともに禁止
+  - カネミ油症事件
+  - 2019.07.08 Oil PCV Inspection at Trans Yard
+
+- PVC
+  - ポリ塩化ビニル
+  - ITERで使用が禁止されている
+    - 火災時に有害ガスが発生するため？
+
+- セレンの輸出規制
+  - 輸出規制対象の毒物・劇物の化合物
+  - 水銀化合物
+  - 砒素化合物
+  - セレン化合物
+  - 等
+
+- Photocoupler
+  - フォトカプラ
+  - 電気的に絶縁しながら信号を伝達する素子
+    - 発光素子
+    - 受光素子
+  - 入力された電気信号を発光素子で光信号に変換
+  - 光信号を受光素子に送る
+  - 独立した電源同士で絶縁を確保した状態で信号をやり取りするときに使用される
+
+As the discontinuity will be still harsh to handle by a "simple" finite difference solver (a finite volume solver is usually the tool you will need),  
+we will use a gaussian filter that will be applied to the fluid height.  
+This will smooth the oscillation (generated by numerical errors).  
+This can be seen as a way to introduce numerical diffusion to the system, often done by adding a diffusion term in the model.  
+The filter has to be carefully tuned (the same way an artificial diffusion has its coefficient diffusion carefully chosen) to smooth the numerical oscillation without affecting the physical behavior of the simulation.
+不連続性は、「単純な」有限差分ソルバー（通常、有限ボリュームソルバーが必要なツールです）による処理がさらに困難になるため、
+流体の高さに適用されるガウスフィルターを使用します。
+これにより、振動が滑らかになります（数値エラーによって生成されます）。
+これは、システムに数値拡散を導入する方法と見なすことができ、多くの場合、
+モデルに拡散項を追加することによって行われます。
+シミュレーションは、シミュレーションの物理的な動作に影響を与えずに数値振動を滑らかにするために、
+注意深く調整する必要があります（人工拡散が係数拡散を慎重に選択するのと同じ方法）。
+
+- 平滑コンデンサ
+  - 交流から直流に変換した後の電圧の変動(リップル)を小さくする
+    - 電圧：高　→　充電
+    - 電圧：低　→　放電
+  - <https://www.olinas.co.jp/topics/cat/knowledge/post/yomoyama-076/>
+
+- 高沿面耐電圧セラミックス
+  - <http://www.pasj.jp/web_publish/pasj9/proceedings/PDF/FRUH/FRUH10.pdf>
+  - アルミナ質セラミックス
+    - 金属との接合が容易
+    - 機械的強度が高い
+    - 低誘電損失
+    - ベーキング可能
+  - セラミックスの耐電圧は沿面耐電圧で制限される
+    - 沿面放電電圧が同一距離での材料バルク放電電圧より低いため
+    - 真空中での放電メカニズムが未解明であるため材料の抜本的な向上が困難
+  - スローリークセラミック
+    - 高電圧(数100kV)の電極で絶縁抵抗をあえて下げることで電流を流す
+    - 放電を抑えることで耐圧性能を保つ
+  - ベーキング後の真空中での赤熱による気体分子放出

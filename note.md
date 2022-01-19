@@ -1,4 +1,14 @@
-# note
+---
+title: note
+---
+
+```bash
+code --list-extensions
+code --list-extensions --show-versions
+code --list-extensions --category <category>
+code --install-extension <extension-id[@<version>] | path-to-vsix> [--force]
+code --uninstall-extension <extension-id>
+```
 
 - <http://www002.upp.so-net.ne.jp/latex/greece.html>
 - WSL2
@@ -14,11 +24,6 @@ Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
-![iruka0](./img/2020-02-25-21-47-48.png)
-![iruka1](./img/2020-02-25-21-46-56.png)
-![iruka2](./img/2020-02-25-21-47-13.png)
-![iruka3](./img/2020-02-25-21-47-24.png)
-
 Restart PC
 
 WSL2
@@ -27,6 +32,10 @@ WSL2
 wsl -l
 wsl --set-version <Distro> 2
 ```
+
+- WSL
+  - \\wsl$\Ubuntu\
+  - /mnt/c/
 
 Docker Pull
 
@@ -46,6 +55,23 @@ Git Config
 ```bash
 git config --global user.email "tnakaicode@gmail.com"
 git config --global user.name "TNakai"
+```
+
+- Git
+  - ssh key設定
+  - ローカルネットワーク上での運用
+  - ローカル環境のみで運用
+    - <http://blog.atwata.com/tool/2017/10/10/init-local-bare-git-repository.html>
+    - git --bare init --shared
+  - USB
+    - <https://qiita.com/r-ngtm/items/4d92f777c8e3c9fa8083>
+
+```bash
+fatal: The remote end hung up unexpectedly
+fatal: early EOF
+fatal: index-pack failed
+
+git config --global http.postBuffer 1048576000
 ```
 
 SSH Keygen
@@ -137,6 +163,15 @@ http_proxy = http://id:pass@proxysrv:port/
 ftp_proxy = http://id:pass@proxysrv:port/
 EOF
 ```
+
+## Plasma
+
+- $m \frac{dv}{dt} = q(E + v\times B)$
+- Case1: $v\perp B=i_z$
+  - $m \frac{d v_x}{dt} = q v_y B$
+  - $m \frac{d v_y}{dt} = -q v_x B$
+  - $\frac{d^2 v_x}{dt^2} = -\omega_c^2 v_x$
+  - $\frac{d^2 v_y}{dt^2} = -\omega_c^2 v_y$
 
 ## HVDC Transmission
 
@@ -328,3 +363,8 @@ The voltage applied to the internal resistance becomes the reduced terminal volt
     - 入力電力　1uW以上　1mW以下
       - 多値で変調
       - Hetero-Dyne
+
+![iruka0](./img/2020-02-25-21-47-48.png)
+![iruka1](./img/2020-02-25-21-46-56.png)
+![iruka2](./img/2020-02-25-21-47-13.png)
+![iruka3](./img/2020-02-25-21-47-24.png)
