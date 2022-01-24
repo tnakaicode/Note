@@ -1,4 +1,4 @@
-# Math
+# 1. Math
 
 $$ k_{\preceq}, k_{\parallel} $$
 
@@ -51,7 +51,7 @@ $$\cosh(x) = \dfrac{\mathrm{e}^{x}+\mathrm{e}^{-x}}{2}$$
 $$\sinh(x) = \dfrac{\mathrm{e}^{x}-\mathrm{e}^{-x}}{2}$$
 $$\tanh(x) = \dfrac{\sinh(x)}{\cosh(x)} = \dfrac{\mathrm{e}^{x} - \mathrm{e}^{-x}}{\mathrm{e}^{x} + \mathrm{e}^{-x}}$$
 
-## Symbol Perturbation method
+## 1.1. Symbol Perturbation method
 
 It is determined how many points are required to define a single curve. The case where more points than the number are on the curve is called degeneration.  
 It is natural to think that the input includes degeneration. In particular, if all the input points are grid points, many points will be on a straight line.  
@@ -68,13 +68,13 @@ $$ p_i^* (x_i + \epsilon^{M^i}, y_i + \epsilon^{M^i}) $$
   
 Here, $M$ is a sufficiently large positive integer.  
 
-## Generalized error analysis of regenerating kernel Hilbert space Gaussian process regression
+## 1.2. Generalized error analysis of regenerating kernel Hilbert space Gaussian process regression
 
 Let the topological space $\Chi = \mathbb{R}^d$ be the input space. The normal distribution with mean $\mu\in\mathbb{R}$ and variance $\sigma^2\ge0$ on R is given by the density function $p(x)$.
 $$ p (x) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp(-\frac{(x-\mu)^2}{2\sigma^2}) $$
 When $\sigma = 0$, it is a Dirac measure on the order of $\mu$.
 
-## Table
+## 1.3. Table
 
 | Symbol            |                 |                    |                  |
 | ----------------- | --------------- | ------------------ | ---------------- |
@@ -111,3 +111,20 @@ When $\sigma = 0$, it is a Dirac measure on the order of $\mu$.
 | $\clubsuit$       | \clubsuit       | $\diamondsuit$     | \diamondsuit     |
 | $\heartsuit$      | \heartsuit      | $\spadesuit$       | \spadesuit       |
 | $\dagger$         | \dagger         |
+
+## 1.4. Numerical integration
+
+- 積分
+  - 分子積分
+    - QCC-on-QCs
+    - 古典コンピュータでは事前計算
+    - 量子コンピュータで高速計算
+    - FC法
+  - ガウス型関数
+    - 多中心積分に公式が使える
+    - 精度を上げるためにDZ, TZ, QZ,と基底関数を増やす
+    - 原点で微分が0
+      - 原子核の可スプ条件を満たさない
+    - 台形公式
+    - Logメッシュ(実空間の場合)
+  - 6次シンプレクティック積分器

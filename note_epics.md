@@ -1,4 +1,4 @@
-# EPICS
+# 1. EPICS
 
 - Experimental Physics and Industrial Control System
 - <https://epics-controls.org/>
@@ -74,3 +74,44 @@ User=ioc
 [Install]
 WantedBy=multi-user.target
 ```
+
+## 1.1. Epics
+
+- Training
+  - Rpi3 B+
+  - Arduino
+
+Hardware
+| type    | url                                              |
+| ------- | ------------------------------------------------ |
+| bus     | <https://epics.anl.gov/modules/bus.php>          |
+| maker   | <https://epics.anl.gov/modules/manufacturer.php> |
+| contact | <https://epics.anl.gov/modules/contact.php>      |
+| link    | <https://epics.anl.gov/modules/link.php>         |
+
+- IOC Support
+  - device and record support software
+  - interface to different kinds of hardware
+- Soft Support
+  - record type
+  - software-only device support, or some other software
+    - run in the IOC but
+    - not readily identified with a particular piece of hardware
+- APS Control Module
+  - Analog
+  - Digital
+  - Bus
+  - Instrument
+  - Soft
+  - Timing
+- RS232
+  - National Instruments
+  - FP-1000 series
+    - <https://github.com/EPICS-F3RP61/epics-f3rp61.git>
+  - Field Point Distributed IO
+    - FP-TC-120
+    - FP-RTD-122
+    - FP-RLY-420
+    - FP-DI-301
+    - FP-DI-330
+    - FP-DI-401

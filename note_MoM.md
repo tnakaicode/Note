@@ -2,7 +2,7 @@
 title: NOTE for MoM
 ---
 
-## Efficient computation techniques for Galerkin MoM antennadesign
+## 1. Efficient computation techniques for Galerkin MoM antennadesign
 
 - implementeda FORTRAN programreferredto as Galerkin Method of Moments with Exact Kernel(GEKMoM) to calculate the current distribution
 - good agreement between the current computedby using the described numerical scheme (namely\GEKMoM"), the commercial software NEC4:1
@@ -69,7 +69,7 @@ git clone https://github.com/ljvmiranda921/pyswarms.git
 gti clone https://github.com/tnakaicode/for90-mom2.git
 ```
 
-## Moment of Method in electromagnetics
+## 2. Moment of Method in electromagnetics
 
 - <https://github.com/topics/method-of-moments>
   - <https://github.com/steverab/tensor-gmm.git>
@@ -125,3 +125,55 @@ FDTD/FEM/BEM(MoM)
 | Bempp     | MIT   | Python+OpenCL/Numba | Python, C++         | Gmsh, meshio           | Shared memory    |
 | PumaEM    | GPLv3 | Python/C++          | Python              | Gmsh, GiD, Ansys, VRML | MPI              |
 | NEC-2     | GPLv2 | C++                 | C/C++/Python/Ruby   | Antenna parameters     | Single-threaded? |
+
+## 3. Method of Weighted Residuals
+
+- Galerkin method
+- GMRES
+  - <https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.sparse.linalg.gmres.html>
+
+## 4. FEM Tech
+
+- <https://qiita.com/syokutakuen/items/bac4c4c6772f20ffa83d>
+
+### 4.1. FDTD FEM MoM
+
+- FDTD
+  - 微分形式のマクスウェル方程式を差分化して時間領域で解く
+- FEM
+  - FDTDと等価な汎関数の極値問題を数値的に解く
+- MoM
+  - 重み付き残差法
+  - アンテナや散乱体表面の電流分布を適当な基底関数で表現
+  - 重み関数との内積を取ることで積分方程式を行列方程式に変換
+  - 逆行列を求めることで行列方程式を解き, 未知の電流値を求める
+- GMRESR
+  - Use Generalized Minimal RESidual iteration to solve A x = b.
+  - GMRESR-FFT method
+  - <https://github.com/jedbrown/dohp>
+  - dual-order preconditioning
+    - were implemented as part of a new C library named Dohp
+  - Dohp is tightly integrated with
+    - PETSc (Balay et al., 2012a)
+    - ITAPS (ITAPS, 2011) interfaces for mesh and geometry services.
+  - In particular, we use the
+    - MOAB (Tautges et al., 2004) and
+    - CGM (Tautges, 2001) implementations of the iMesh and iGeom interfaces.
+  - In the examples using algebraic multigrid,
+    - smoothed aggregation from ML (Gee et al., 1)
+    - classical multigrid from BoomerAMG (Henson and Yang, 2002), all accessed through the common PETSc interface.
+  - The ML interface is designed to only produce aggregates which PETSc
+    - uses to construct the multigrid hierarchy
+    - exposes all PETSc preconditioners as smoothers,
+    - while BoomerAMG is essentially a black-box preconditioner.
+  - Smoothed aggregation is known to scale slightly superlinearly,
+    - but in our tests ML was always significantly
+      - faster and less memory consuming
+      - than the typically more robust BoomerAMG
+    - We use PETSc-3.0.0, ML-6.22, and BoomerAMG from Hypre-2.4.0b.
+  - The libMesh (Kirk et al., 2006) library
+    - is used to provide a reference for conventional methods
+      - based on assembling the true Jacobian
+      - Since libMesh also uses PETSc for linear algebra,
+    - identical solver parameters
+      - are used so that the results are representative.
