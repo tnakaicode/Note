@@ -2,6 +2,11 @@
 title: Influence of Emitter Surface Roughness and Emission inhomogeneity
 ---
 
+- [1. MIG](#1-mig)
+- [2. Cavity](#2-cavity)
+- [3. Key-Word](#3-key-word)
+- [4. Program](#4-program)
+
 - Key components of Gyrotron
 - investigate the influence of the quality of the emitter on the quality of electron beam nad gyrotron efficiency
 - KIT in house code
@@ -135,7 +140,7 @@ $$ \frac{r_b(z_2)}{r_b (z_1)} \approx \sqrt{\frac{B(z_1)}{B(z_2)}} $$
     - When the electron is in Right Position
       - the electron is accelerating by electric field and $\Omega_c$ will decrease
 
-## Key-Word
+## 3. Key-Word
 
 - CVC Current Voltage Charactristics
 - Tonnerre model
@@ -144,7 +149,7 @@ $$ \frac{r_b(z_2)}{r_b (z_1)} \approx \sqrt{\frac{B(z_1)}{B(z_2)}} $$
     - the temperature limited region of CVC curve
   - results from the work function distribution of the emitter
 
-## Program
+## 4. Program
 
 - quasi-static PIC (Particle in Cell)
   - QuickPIC <https://github.com/UCLA-Plasma-Simulation-Group/QuickPIC-OpenSource.git>

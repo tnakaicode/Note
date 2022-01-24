@@ -1,4 +1,12 @@
-# 1. NOTE SSH
+---
+title: NOTE for SSH
+---
+
+- [1. SSH for WSL on Win10](#1-ssh-for-wsl-on-win10)
+  - [1.1. Setting of A (Client)](#11-setting-of-a-client)
+  - [1.2. Setting of B (Host)](#12-setting-of-b-host)
+- [2. SSH for github](#2-ssh-for-github)
+- [3. Remote Desktop](#3-remote-desktop)
 
 ```bash
 # ssh autostart
@@ -7,11 +15,11 @@ sudo update-rc.d ssh defaults
 sudo systemctl enable ssh.socket
 ```
 
-## 1.1. SSH for WSL on Win10
+## 1. SSH for WSL on Win10
 
 A -> B
 
-### 1.1.1. Setting of A (Client)
+### 1.1. Setting of A (Client)
 
 Check IP and Port of WSL
 
@@ -30,7 +38,7 @@ ssh-keygen -t rsa -f id_rsa_wsl
 scp id_rsa_wsl \\wsl$\Ubuntu\home\<username>\.ssh
 ```
 
-### 1.1.2. Setting of B (Host)
+### 1.2. Setting of B (Host)
 
 /etc/ssh/sshd_config
 
@@ -66,7 +74,7 @@ then
 fi
 ```
 
-## 1.2. SSH for github
+## 2. SSH for github
 
 SSH Pub-Key in github
 
@@ -100,7 +108,7 @@ Test and Debug
 ssh -vT git@github.com
 ```
 
-## 1.3. Remote Desktop
+## 3. Remote Desktop
 
 ```bash
 sudo apt install xrdp

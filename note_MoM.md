@@ -2,6 +2,12 @@
 title: NOTE for MoM
 ---
 
+- [1. Efficient computation techniques for Galerkin MoM antennadesign](#1-efficient-computation-techniques-for-galerkin-mom-antennadesign)
+- [2. Moment of Method in electromagnetics](#2-moment-of-method-in-electromagnetics)
+- [3. Method of Weighted Residuals](#3-method-of-weighted-residuals)
+- [4. FEM Tech](#4-fem-tech)
+  - [4.1. FDTD FEM MoM](#41-fdtd-fem-mom)
+
 ## 1. Efficient computation techniques for Galerkin MoM antennadesign
 
 - implementeda FORTRAN programreferredto as Galerkin Method of Moments with Exact Kernel(GEKMoM) to calculate the current distribution

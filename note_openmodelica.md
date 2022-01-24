@@ -2,6 +2,8 @@
 title: OepnModelica Circuite
 ---
 
+- [1. HVSW](#1-hvsw)
+
 - <https://www.programmersought.com/article/40412970490/>
 - <https://www.programmersought.com/article/35352889888/>
 - <http://ayumi.cava.jp/audio/pow/node20.html>
@@ -9,7 +11,7 @@ title: OepnModelica Circuite
 - <http://ayumi.cava.jp/audio/ac/node9.html>
 - <http://champ.chips.jp/gazou14/tube2.html>
 
-## HVSW
+## 1. HVSW
 
 - <https://www.shindengen.co.jp/products/semi/column/basic/mosfet/mosfet.html>
 - Diode

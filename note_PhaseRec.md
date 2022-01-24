@@ -1,6 +1,11 @@
-# Phase Re-Construction
+---
+title: Phase Re-Construction
+---
 
-## 3D FFT Filtering
+- [1. 3D FFT Filtering](#1-3d-fft-filtering)
+- [2. Phase recovery method](#2-phase-recovery-method)
+
+## 1. 3D FFT Filtering
 
 1. some focus image
 2. Each Fourier Spectrum
@@ -8,7 +13,7 @@
 3. Fourier Transform to Focus axis
 4. 3D inv-FFT
 
-## Phase recovery method
+## 2. Phase recovery method
 
 - Fienup iteration
   - コヒーレント結像系の回折面と像面の振幅分布から位相分布を反復的に求める方法

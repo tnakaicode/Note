@@ -1,4 +1,11 @@
-# 1. Math
+---
+title: Math
+---
+
+- [1. Symbol Perturbation method](#1-symbol-perturbation-method)
+- [2. Generalized error analysis of regenerating kernel Hilbert space Gaussian process regression](#2-generalized-error-analysis-of-regenerating-kernel-hilbert-space-gaussian-process-regression)
+- [3. Table](#3-table)
+- [4. Numerical integration](#4-numerical-integration)
 
 $$ k_{\preceq}, k_{\parallel} $$
 
@@ -51,7 +58,7 @@ $$\cosh(x) = \dfrac{\mathrm{e}^{x}+\mathrm{e}^{-x}}{2}$$
 $$\sinh(x) = \dfrac{\mathrm{e}^{x}-\mathrm{e}^{-x}}{2}$$
 $$\tanh(x) = \dfrac{\sinh(x)}{\cosh(x)} = \dfrac{\mathrm{e}^{x} - \mathrm{e}^{-x}}{\mathrm{e}^{x} + \mathrm{e}^{-x}}$$
 
-## 1.1. Symbol Perturbation method
+## 1. Symbol Perturbation method
 
 It is determined how many points are required to define a single curve. The case where more points than the number are on the curve is called degeneration.  
 It is natural to think that the input includes degeneration. In particular, if all the input points are grid points, many points will be on a straight line.  
@@ -68,13 +75,13 @@ $$ p_i^* (x_i + \epsilon^{M^i}, y_i + \epsilon^{M^i}) $$
   
 Here, $M$ is a sufficiently large positive integer.  
 
-## 1.2. Generalized error analysis of regenerating kernel Hilbert space Gaussian process regression
+## 2. Generalized error analysis of regenerating kernel Hilbert space Gaussian process regression
 
 Let the topological space $\Chi = \mathbb{R}^d$ be the input space. The normal distribution with mean $\mu\in\mathbb{R}$ and variance $\sigma^2\ge0$ on R is given by the density function $p(x)$.
 $$ p (x) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp(-\frac{(x-\mu)^2}{2\sigma^2}) $$
 When $\sigma = 0$, it is a Dirac measure on the order of $\mu$.
 
-## 1.3. Table
+## 3. Table
 
 | Symbol            |                 |                    |                  |
 | ----------------- | --------------- | ------------------ | ---------------- |
@@ -112,7 +119,7 @@ When $\sigma = 0$, it is a Dirac measure on the order of $\mu$.
 | $\heartsuit$      | \heartsuit      | $\spadesuit$       | \spadesuit       |
 | $\dagger$         | \dagger         |
 
-## 1.4. Numerical integration
+## 4. Numerical integration
 
 - 積分
   - 分子積分

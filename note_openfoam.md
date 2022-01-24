@@ -1,4 +1,11 @@
-# 1. OpenFOAM
+---
+title: OpenFOAM
+---
+
+- [1. Build](#1-build)
+- [2. MHD (EHD)](#2-mhd-ehd)
+- [3. Flow Electrificationin](#3-flow-electrificationin)
+- [4. PETSc/Tao](#4-petsctao)
 
 - reactingParcelFilmFoam
 - MHD
@@ -6,7 +13,7 @@
 - 熱平衡・高温高圧では、中性子・陽子は古典的粒子として扱える
   - Maxwell Boltzmann
 
-## 1.1. Build
+## 1. Build
 
 ```bash
 # OpenFOAM-Plus
@@ -36,9 +43,9 @@ source etc/bashrc
 ./Allwmake
 ```
 
-## 1.2. MHD (EHD)
+## 2. MHD (EHD)
 
-## 1.3. Flow Electrificationin
+## 3. Flow Electrificationin
 
 - Flow Electrificationin
 - 流動帯電
@@ -86,7 +93,7 @@ source etc/bashrc
       - under the action of an electric field
       - neglecting any reaction
 
-## 1.4. PETSc/Tao
+## 4. PETSc/Tao
 
 - Portable, Extensible Toolkit for Scientific Computation
 - <https://www.mcs.anl.gov/petsc/index.html>

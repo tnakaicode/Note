@@ -1,4 +1,11 @@
-# 1. EPICS
+---
+title: EPICS
+---
+
+- [1. Installl](#1-installl)
+- [2. Epics](#2-epics)
+
+## 1. Installl
 
 - Experimental Physics and Industrial Control System
 - <https://epics-controls.org/>
@@ -75,7 +82,7 @@ User=ioc
 WantedBy=multi-user.target
 ```
 
-## 1.1. Epics
+## 2. Epics
 
 - Training
   - Rpi3 B+

@@ -2,6 +2,14 @@
 title: note
 ---
 
+- [1. Plasma](#1-plasma)
+- [2. HVDC Transmission](#2-hvdc-transmission)
+- [3. Numerical electric field calculation](#3-numerical-electric-field-calculation)
+- [4. Liquefaction of helium](#4-liquefaction-of-helium)
+- [5. High-voltage IGBT multi-series technology](#5-high-voltage-igbt-multi-series-technology)
+- [6. Check the battery consumption with a tester](#6-check-the-battery-consumption-with-a-tester)
+- [7. Memo](#7-memo)
+
 ```bash
 code --list-extensions
 code --list-extensions --show-versions
@@ -164,7 +172,7 @@ ftp_proxy = http://id:pass@proxysrv:port/
 EOF
 ```
 
-## Plasma
+## 1. Plasma
 
 - $m \frac{dv}{dt} = q(E + v\times B)$
 - Case1: $v\perp B=i_z$
@@ -173,7 +181,7 @@ EOF
   - $\frac{d^2 v_x}{dt^2} = -\omega_c^2 v_x$
   - $\frac{d^2 v_y}{dt^2} = -\omega_c^2 v_y$
 
-## HVDC Transmission
+## 2. HVDC Transmission
 
 設備構成別
 
@@ -204,7 +212,7 @@ EOF
 - LTT Light Triggered Thyristor
 - MMC Modular Multi-Level Converter
 
-## Numerical electric field calculation
+## 3. Numerical electric field calculation
 
 - Finite Difference method 差分法
   - 領域を格子で分割しラプラスの式を差分の式に置き換えて
@@ -267,7 +275,7 @@ $$ X_e = \frac{\epsilon}{8 \delta} ((b_i \phi_i + b_j \phi_j + b_m \phi_m)^2 + (
 
 - Charge Simulation method CSM 電荷重畳法
 
-## Liquefaction of helium
+## 4. Liquefaction of helium
 
 ヘリウムの液化に用いられる冷却方法
 真空中に急激にヘリウムを押し込み、分子が広がるときに分子間力に引かれて押し込まれ気体分子の速度が減少する。
@@ -281,7 +289,7 @@ Joule-Thomson effect
 Helium has a particularly low critical point of 5.2K.
 Once liquid is formed, pump down the gas and reduce the pressure. When the pressure drops, the liquid evaporates, absorbing the heat of evaporation from the surroundings to lower the temperature.
 
-## High-voltage IGBT multi-series technology
+## 5. High-voltage IGBT multi-series technology
 
 - <https://www.fujielectric.co.jp/about/company/jihou_2002/pdf/75-08/07.pdf>
 
@@ -305,7 +313,7 @@ Suppressing device voltage imbalance is the biggest challenge when connecting IG
 
 The gate lines of the IGBTs connected in series are magnetically coupled by a core (hereinafter, referred to as a gate balance core) to balance the timing of the gate current flowing during switching. As a result, element voltage sharing can be equalized.
 
-## Check the battery consumption with a tester
+## 6. Check the battery consumption with a tester
 
 電池に負荷抵抗をつないで調べる。
 電池が実際に使われている状態を再現して電流が流れている時の、電池の端子電圧を測定する。
@@ -320,7 +328,7 @@ The voltage applied to the internal resistance becomes the reduced terminal volt
 - 赤 - 左手 - 正極
 - 黒 - 右手 - 負極
 
-## Memo
+## 7. Memo
 
 - 量子暗号
   - <http://www.scat.or.jp/frontier/frontier75/waseda.pdf>

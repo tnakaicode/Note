@@ -2,7 +2,14 @@
 title: OpenCASCADE
 ---
 
-## Install
+- [1. Install](#1-install)
+- [2. Build](#2-build)
+- [3. Python Wrap](#3-python-wrap)
+  - [3.1. Build Error](#31-build-error)
+  - [3.2. Explain](#32-explain)
+- [4. DICE](#4-dice)
+
+## 1. Install
 
 ```bash
 # python=3.7
@@ -12,7 +19,7 @@ conda install -c dlr-sc pythonocc-core=7.4.0
 conda install -c conda-forge pythonocc-core=7.4.0
 ```
 
-## Build
+## 2. Build
 
 - .hxx - this is the user header file to be included by your C++ code
 - .cxx - this is the actual C++ implementation code compiled into the OpenCASCADE library
@@ -21,7 +28,7 @@ conda install -c conda-forge pythonocc-core=7.4.0
 - .ixx - user head file for an entire package included by the package level .cxx file
 - .jxx - user header file for secondary classes of a package included by the package level .cxx file.
 
-## Python Wrap
+## 3. Python Wrap
 
 - [OCC](https://salsa.debian.org/kkremitzki-guest/opencascade.git)
   - OpenCASCADE 7.0
@@ -57,13 +64,13 @@ conda install -c dlr-sc freeimage freeimageplus gl2ps
 conda install -c intel libpng tcl
 ```
 
-### Build Error
+### 3.1. Build Error
 
-### Explain
+### 3.2. Explain
 
 - Geom_BoundedSurface
   - <https://www.opencascade.com/doc/occt-7.4.0/refman/html/class_geom___bounded_surface.html>
   - The root class for bounded surfaces in 3D space.
   - A bounded surface is defined by a rectangle in its 2D parametric space
 
-## DICE
+## 4. DICE
