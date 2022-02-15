@@ -444,3 +444,28 @@ The voltage applied to the internal resistance becomes the reduced terminal volt
   - <https://qiita.com/tikkss@github/items/4db7bec95a7337ca826d>
 
   - [enum]::GetNames([Net.SecurityProtocolType])
+
+- RTD Resistance Temperature Detector
+  - <https://www.keyence.co.jp/ss/products/recorder/lab/thermometry/resistance_bulb.jsp>
+  - PT100/PT1000
+    - PT100 (白金 0℃ - 100Ω) JIS-C1604
+      - 0.385Ω/1℃
+    - PT1000(白金 0℃ - 1000Ω)
+  - 2線式/3線式/4線式
+    - 2線式 A-B
+      - 抵抗素子の両端にそれぞれ1本ずつ導線を接続した結線方式です。
+      - 安価ですが、導線抵抗値がそのまま抵抗値として加算されますので、あらかじめ導線抵抗値を調べて補正をする必要があります
+      - そのため、実用的ではありません。
+    - 3線式 A-BB
+      - 最も一般的な結線方式です。抵抗素子の片端に2本、もう片端に1本の導線を接続した結線方式です。
+      - 3本の導線の長さ、材質、線経及び電気抵抗が等しい場合、導線抵抗の影響を回避できることが特徴です。
+    - 4線式 AA-BB
+      - 抵抗素子の両端に2本ずつ導線を接続した結線方式です。
+      - 高価ですが、測定原理上、導線抵抗の影響を完全に回避できます。
+
+- TC Thermal Coupler
+  - 熱電対
+  - 補償導線
+    - PVC被覆/ガラス繊維被覆
+
+- 絶縁トランス <https://www.digikey.jp/ja/articles/the-basics-of-isolation-transformers-and-how-to-select-and-use-them>
