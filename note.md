@@ -8,7 +8,8 @@ title: note
 - [4. Liquefaction of helium](#4-liquefaction-of-helium)
 - [5. High-voltage IGBT multi-series technology](#5-high-voltage-igbt-multi-series-technology)
 - [6. Check the battery consumption with a tester](#6-check-the-battery-consumption-with-a-tester)
-- [7. Memo](#7-memo)
+- [7. Markdown to PDF](#7-markdown-to-pdf)
+- [8. Memo](#8-memo)
 
 ```bash
 code --list-extensions
@@ -328,7 +329,37 @@ The voltage applied to the internal resistance becomes the reduced terminal volt
 - 赤 - 左手 - 正極
 - 黒 - 右手 - 負極
 
-## 7. Memo
+## 7. Markdown to PDF
+
+Default template.html
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{{title}}}</title>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+  {{{style}}}
+  {{{mermaid}}}
+</head>
+
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+        ? 'dark'
+        : 'default'
+    });
+  </script>
+  {{{content}}}
+</body>
+
+</html>
+```
+
+## 8. Memo
 
 - 量子暗号
   - <http://www.scat.or.jp/frontier/frontier75/waseda.pdf>
