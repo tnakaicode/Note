@@ -7,15 +7,15 @@ import os
 import glob
 import shutil
 import datetime
-from optparse import OptionParser
+import argparse
 
 if __name__ == '__main__':
     argvs = sys.argv
-    parser = OptionParser()
-    parser.add_option("--dir", dest="dir", default="./")
-    parser.add_option("--file", dest="file", default="Note")
-    opt, argc = parser.parse_args(argvs)
-    print(opt, argc)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--dir", dest="dir", default="./")
+    parser.add_argument("--file", dest="file", default="Note")
+    opt = parser.parse_args()
+    print(opt, argvs)
 
     print(datetime.date.today())
     datenm = "{0:%Y%m%d}".format(datetime.date.today())
