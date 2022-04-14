@@ -3,7 +3,8 @@ title: EPICS
 ---
 
 - [1. Installl](#1-installl)
-- [2. Epics](#2-epics)
+- [2. Epics Developer](#2-epics-developer)
+- [3. EPICS Debug](#3-epics-debug)
 
 ## 1. Installl
 
@@ -82,7 +83,7 @@ User=ioc
 WantedBy=multi-user.target
 ```
 
-## 2. Epics
+## 2. Epics Developer
 
 - Training
   - Rpi3 B+
@@ -122,3 +123,9 @@ Hardware
     - FP-DI-301
     - FP-DI-330
     - FP-DI-401
+
+## 3. EPICS Debug
+
+- PVと結びついたボードのポート番号を確認する方法
+  - How to check the port number of the board tied to PV
+  - How to find which IOC provides a PV
