@@ -12,7 +12,8 @@ title: RF Tech
   - [3.1. Gaussian Optics](#31-gaussian-optics)
 - [4. MoM](#4-mom)
   - [4.1. Circularly polarized antenna](#41-circularly-polarized-antenna)
-- [5. Irregular Waveguide](#5-irregular-waveguide)
+  - [4.2. Irregular Waveguide](#42-irregular-waveguide)
+- [5. 光・波動のための有限要素法の基礎](#5-光波動のための有限要素法の基礎)
 - [6. 三極管制御](#6-三極管制御)
 - [7. GTD Geometrical Theory of Diffraction](#7-gtd-geometrical-theory-of-diffraction)
 - [8. Directive Coupler](#8-directive-coupler)
@@ -471,7 +472,7 @@ $$ AR = \sqrt{\frac{|E_x|^2 \cos^2(\tau) + |E_x||E_y| \sin(2\tau)\cos(\delta) + 
 AR may be displayed in db. $AR<3Db$ is often circularly polarized, but AR is closely related to the cross-polarization discrimination XPD, which indicates the magnitude of the difference between the main polarization and cross-polarization.
 The evaluation value of AR should be determined taking into account the effect of polarization loss between the transmitting and receiving antennas.
 
-## 5. Irregular Waveguide
+### 4.2. Irregular Waveguide
 
 Gyro-K, Opti-K, Gyro-KL
 
@@ -515,6 +516,51 @@ $$ \rm r(\rho, \phi, s) = \bm R(s) + \rho r_b(\phi, s) \{ \bm n(s)\cos(\phi) + \
 - $\bm r$ - radius-vector of arbitrary point inside waveguide
 - $\bm R(s)$ - equation of waveguide axis in Certesian coordinate
 - $n(s), b(s)$ - unit vectors of main normal and binormal axis of waveguide
+
+## 5. 光・波動のための有限要素法の基礎
+
+- 積分計算(1次要素・2次要素)
+
+- 1次元有限要素法
+  - 1次元問題と汎関数
+  - 線要素
+  - 形状関数
+  - 要素方程式
+  - 積分計算
+- 2次元有限要素法
+  - 2次元問題と汎関数
+  - 三角形要素
+  - 形状関数
+  - 要素方程式
+  - 積分計算
+- 3次元有限要素法
+  - 3次元問題と汎関数
+  - 四面体要素
+  - 形状関数
+  - 要素方程式
+  - 積分計算
+- 軸対称2次元有限要素法
+  - 軸対称2次元問題と汎関数
+  - 軸対称環状要素
+  - 形状関数
+  - 要素方程式
+  - 積分計算
+- 軸対称3次元有限要素法
+  - 軸対称3次元問題と汎関数
+  - 軸対称三角形環状要素
+  - 形状関数
+  - 要素方程式
+  - 積分計算
+
+- 固有値問題
+  - $\lambda$に関する線形固有値問題
+  - $\lambda$に関する非線形固有値問題
+
+- スプリアス解
+  - 波動方程式はスカラ波動方程式・ベクトル波動方程式に分けられる
+  - 電磁波固有値問題の有限要素法解析では、特にベクトル波動解析において、非物理的な解が発生する
+  - Ez, Hzはそれぞれ、導波路伝搬方向の電界・磁界成分
+  - Et, Htはそれぞれ、伝搬方向に垂直な断面内の電界・磁界成分(横電界・横磁界)
 
 ## 6. 三極管制御
 
