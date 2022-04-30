@@ -3,11 +3,11 @@ title: GSMAC-FEM
 ---
 
 - [1. GSMAC-2D](#1-gsmac-2d)
-  - [1.1. Digit](#11-digit)
+- [2. Digit](#2-digit)
 
 ## 1. GSMAC-2D
 
-### 1.1. Digit
+## 2. Digit
 
 2D-Cartesianでの方程式群
 
