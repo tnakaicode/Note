@@ -14,11 +14,12 @@ title: RF Tech
   - [4.1. Circularly polarized antenna](#41-circularly-polarized-antenna)
   - [4.2. Irregular Waveguide](#42-irregular-waveguide)
 - [5. 光・波動のための有限要素法の基礎](#5-光波動のための有限要素法の基礎)
-- [6. 三極管制御](#6-三極管制御)
-- [7. GTD Geometrical Theory of Diffraction](#7-gtd-geometrical-theory-of-diffraction)
-- [8. Directive Coupler](#8-directive-coupler)
-- [9. Frequency Band](#9-frequency-band)
-- [10. Micro Wave Band](#10-micro-wave-band)
+- [6. 電磁現象の逆問題](#6-電磁現象の逆問題)
+- [7. 三極管制御](#7-三極管制御)
+- [8. GTD Geometrical Theory of Diffraction](#8-gtd-geometrical-theory-of-diffraction)
+- [9. Directive Coupler](#9-directive-coupler)
+- [10. Frequency Band](#10-frequency-band)
+- [11. Micro Wave Band](#11-micro-wave-band)
 
 Dielectric constant of lossy medium
 $$ \epsilon_r = \epsilon_r^{\prime} - j\epsilon_r^{\prime\prime} $$
@@ -562,9 +563,21 @@ $$ \rm r(\rho, \phi, s) = \bm R(s) + \rho r_b(\phi, s) \{ \bm n(s)\cos(\phi) + \
   - Ez, Hzはそれぞれ、導波路伝搬方向の電界・磁界成分
   - Et, Htはそれぞれ、伝搬方向に垂直な断面内の電界・磁界成分(横電界・横磁界)
 
-## 6. 三極管制御
+## 6. 電磁現象の逆問題
 
-![pic](./img/Triode.png)
+- 渦電流探傷法による欠陥形状同定
+  - 渦電流探傷試験 ECT
+  - 試料の上を走査する誘導コイルと、コイルによって誘導される試料内を流れる渦電流、との相互作用によってできる磁場の測定
+  - 磁場の変化は励磁コイルのインピーダンスの変化として測定される
+  - 理想的なき裂による電磁界の不連続性は二次的な電流源としてモデル化できる
+    - 電流源としてき裂中心に集中した電流双極子を用いる
+- 原子炉圧力容器の経年劣化評価
+- マイクロECT 確率論的最適化法による導電率摂動分布逆計算
+- 核融合装置磁場の最適形状決定問題
+
+## 7. 三極管制御
+
+![pic](img/Triode.png)
 
 - 格子電圧が陰極電位よりわずかに負の場合でも
   - 陽極側の電界が浸み込み、陰極表面の電界が正になる
@@ -575,7 +588,7 @@ $$ \rm r(\rho, \phi, s) = \bm R(s) + \rho r_b(\phi, s) \{ \bm n(s)\cos(\phi) + \
   - 相互コンダクタンス $g_m$
   - 内部抵抗 $R_i$
 
-![pic](./img/Triode_001.png)
+![pic](img/Triode_001.png)
 
 - 格子電圧は、陰極とEarthの間に抵抗をつなぎ
   - 電圧降下分で格子バイアス電圧を自動でかける
@@ -586,7 +599,7 @@ $$ \rm r(\rho, \phi, s) = \bm R(s) + \rho r_b(\phi, s) \{ \bm n(s)\cos(\phi) + \
   - 格子電流の流れる回路を形成
   - 入力抵抗くを高く保ったままにするため高い格子抵抗を加える
 
-## 7. GTD Geometrical Theory of Diffraction
+## 8. GTD Geometrical Theory of Diffraction
 
 - 回折波を励振する入射・表面反射が幾何学的な散乱体の形状により作られる影境界(Shadown Boundary)の近くで界が発散する
 - 回折界のスペクトル積分表示において
@@ -604,7 +617,7 @@ $$ \rm r(\rho, \phi, s) = \bm R(s) + \rho r_b(\phi, s) \{ \bm n(s)\cos(\phi) + \
     - 溝の開口が波長に比べて大きいとき
     - 溝内の底部に向かって並行平板導波管モードあるいは開放型の共振器モードが励振する
 
-## 8. Directive Coupler
+## 9. Directive Coupler
 
 高周波信号の分離・融合・結合を行う。
 
@@ -615,7 +628,7 @@ $$ \rm r(\rho, \phi, s) = \bm R(s) + \rho r_b(\phi, s) \{ \bm n(s)\cos(\phi) + \
 
 重要な特性の一つは、入射波と反射波にどの程度分離できるかどうかにある。
 
-## 9. Frequency Band
+## 10. Frequency Band
 
 Frequency Band
 | Name |           Mean |          freq band |               日本語 |
@@ -630,7 +643,7 @@ Frequency Band
 | EHF  | Extremely High |   30.0 ~ 300.0 GHz |               ミリ波 |
 |      |                | 300.0 ~ 3000.0 GHz |           サブミリ波 |
 
-## 10. Micro Wave Band
+## 11. Micro Wave Band
 
 IEEE-Band
 | -Band     |          freq |
@@ -661,24 +674,25 @@ Waveguide-Band
 | J - band | 220 ~ 325 GHz |
 | Y - band | 325 ~ 500 GHz |
 
-1. 高周波損失
-   1. 表皮効果
-      1. 断面が円形の導体に高周波電流を流すと磁束が時間的に変化する
-      2. 磁束の変化により電流とは逆向きに起電力が発生する
-      3. 磁束の変化により生じる逆起電力は導体の中心部ほど強くなる
-         1. 導体の内部の電流は、表面が最大で中心部に向かうほど急激に減少する
-         2. 電流の流れる有効断面積が導体の断面積より小さくなる
-   2. 放射損
-      1. 機器を2本の導線で結ぶと、ループアンテナとなって電磁波を放射し損失が起きる
-2. 伝送機器
-   1. レッヘル線
-   2. 同軸線路
-   3. ストリップ線路
-      1. トリプレート線路
-      2. マイクロストリップ線路
-   4. 導波管
-   5. コプレナ線路
-   6. 表面波線路
+- 高周波損失
+  - 表皮効果
+    - 断面が円形の導体に高周波電流を流すと磁束が時間的に変化する
+    - 磁束の変化により電流とは逆向きに起電力が発生する
+    - 磁束の変化により生じる逆起電力は導体の中心部ほど強くなる
+      - 導体の内部の電流は、表面が最大で中心部に向かうほど急激に減少する
+      - 電流の流れる有効断面積が導体の断面積より小さくなる
+    - $$ P_c = \int_C i_S^2 R_S dC $$
+  - 放射損
+    - 機器を2本の導線で結ぶと、ループアンテナとなって電磁波を放射し損失が起きる
+- 伝送機器
+  - レッヘル線
+  - 同軸線路
+  - ストリップ線路
+    - トリプレート線路
+    - マイクロストリップ線路
+  - 導波管
+  - コプレナ線路
+  - 表面波線路
 
 電磁波の形状
 | Mode | Ez  | Hz  |
