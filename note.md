@@ -9,7 +9,8 @@ title: note
 - [5. High-voltage IGBT multi-series technology](#5-high-voltage-igbt-multi-series-technology)
 - [6. Check the battery consumption with a tester](#6-check-the-battery-consumption-with-a-tester)
 - [7. Markdown to PDF](#7-markdown-to-pdf)
-- [8. Memo](#8-memo)
+- [8. electric circuit](#8-electric-circuit)
+- [9. Memo](#9-memo)
 
 ```bash
 code --list-extensions
@@ -359,7 +360,21 @@ Default template.html
 </html>
 ```
 
-## 8. Memo
+## 8. electric circuit
+
+トランジスタ技術　2021.07
+
+- 抵抗
+  - 抵抗ではすべての電力が消費されている
+  - エネルギーは瞬時に熱に変換される
+- コンデンサ
+  - コンデンサには電圧の形でエネルギーが蓄積される
+  - Ws = 1/2CV^2
+  - I=ΔVC
+  - コンデンサに流れる電流は、電圧の変動とキャパシタによって決まる
+- コイル
+
+## 9. Memo
 
 - 量子暗号
   - <http://www.scat.or.jp/frontier/frontier75/waseda.pdf>
