@@ -10,7 +10,8 @@ title: note
 - [6. Check the battery consumption with a tester](#6-check-the-battery-consumption-with-a-tester)
 - [7. Markdown to PDF](#7-markdown-to-pdf)
 - [8. electric circuit](#8-electric-circuit)
-- [9. Memo](#9-memo)
+- [9. WSL](#9-wsl)
+- [10. Memo](#10-memo)
 
 ```bash
 code --list-extensions
@@ -374,7 +375,26 @@ Default template.html
   - コンデンサに流れる電流は、電圧の変動とキャパシタによって決まる
 - コイル
 
-## 9. Memo
+## 9. WSL
+
+```bash
+wsl -l
+wsl -t Ubuntu-22.04
+wsl --export Ubutnut-22.04 ubuntu-22.04.tar
+wsl --unregister Ubuntu-22.04
+wsl --import Ubuntu-22.04 Ubuntu-22.04 ubuntu-22.04.tar
+wsl -d Ubuntu-22.04 -u root
+
+# etc/wsl.conf
+[user]
+default=username
+
+# mount
+sudo mount -t drvfs '\\nas\share' /mnt/nas/
+sudo mount -t drvfs \\\\nas\\share /mnt/nas/
+```
+
+## 10. Memo
 
 - 量子暗号
   - <http://www.scat.or.jp/frontier/frontier75/waseda.pdf>
