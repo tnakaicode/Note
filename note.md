@@ -11,7 +11,8 @@ title: note
 - [7. Markdown to PDF](#7-markdown-to-pdf)
 - [8. electric circuit](#8-electric-circuit)
 - [9. WSL](#9-wsl)
-- [10. Memo](#10-memo)
+- [10. Design Pattern](#10-design-pattern)
+- [11. Memo](#11-memo)
 
 ```bash
 code --list-extensions
@@ -394,7 +395,35 @@ sudo mount -t drvfs '\\nas\share' /mnt/nas/
 sudo mount -t drvfs \\\\nas\\share /mnt/nas/
 ```
 
-## 10. Memo
+## 10. Design Pattern
+
+| Category   | Name                    | Comment                            |
+| ---------- | ----------------------- | ---------------------------------- |
+| Generation | Abstract Factory        |
+|            | Builder                 |
+|            | Factory Method          |
+|            | Prototype               | Pythonのライブラリ・ビルトイン有り |
+|            | Singleton               | Pythonのライブラリ・ビルトイン有り |
+| Structure  | Adapter                 |
+|            | Bridge                  | Pythonicな書き方有り               |
+|            | Composite               |
+|            | Decorator               | Pythonビルトイン有り               |
+|            | Facade                  |
+|            | Flyweight               | Python機能で代用                   |
+|            | Proxy                   |
+| Behavior   | Chain of Responsibility |
+|            | Command                 |
+|            | Interpreter             |
+|            | Iterator                | Pythonビルトイン有り               |
+|            | Mediator                |
+|            | Memento                 |
+|            | Observer                |
+|            | State                   |
+|            | Strategy                |
+|            | Template Method         |
+|            | Visitor                 | Pythonビルトイン有り               |
+
+## 11. Memo
 
 - 量子暗号
   - <http://www.scat.or.jp/frontier/frontier75/waseda.pdf>
