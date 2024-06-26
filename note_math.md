@@ -67,7 +67,15 @@ It is good to move all the points to eliminate the shrinkage in order to elimina
 In addition, even if the user can move without changing the topology, another degeneration may occur.  
 Further, it is important to make the moving distance minute, but if it is made too small, another problem is caused due to calculation errors.  
 If a calculation time overhead is allowed, there is a calculation method having the same effect as effectively moving by a minute distance. (Symbol perturbation method)  
-  
+
+1つの曲線を定義するのに必要な点の数を決める。その数より多くの点が曲線上にある場合をディジェネレーションと呼ぶ。  
+入力に縮退が含まれていると考えるのは自然である。特に、入力点がすべて格子点であれば、直線上にある点が多くなる。  
+基本的には縮退を考慮してアルゴリズムを設計するが、縮退を考慮すると分割が複雑になり、アルゴリズムの妥当性を検証するのが難しくなる。これを解決する方法として摂動法がある。  
+縮退を解消するためには全ての点を移動させるのが良い。しかし、点を移動させすぎると、元の点集合とは異なるトポロジーを持つ点集合になってしまう。  
+また、トポロジーを変えずに移動できたとしても、別の縮退が発生する可能性がある。  
+さらに、移動距離を微小にすることが重要であるが、微小にしすぎると計算誤差による別の問題が発生する。  
+計算時間のオーバーヘッドが許されるのであれば、実質的に微小距離の移動と同じ効果を持つ計算方法がある。(記号摂動法）  
+
 Consider a symbol perturbation method to avoid the degeneracy that three points are arranged on the same straight line.  
 Given n points $p_1(x_1,y_1),p_2(x_2,y_2),...,p_n(x_n,y_n)$, each point $p_i(x_i,y_i)$ is converted to Move to $p_i^*$.  
   
