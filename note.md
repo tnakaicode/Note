@@ -3,13 +3,13 @@ title: note
 ---
 
 - [1. Plasma](#1-plasma)
-- [2. HVDC Transmission](#2-hvdc-transmission)
-- [3. Numerical electric field calculation](#3-numerical-electric-field-calculation)
-- [4. Liquefaction of helium](#4-liquefaction-of-helium)
-- [5. High-voltage IGBT multi-series technology](#5-high-voltage-igbt-multi-series-technology)
-- [6. Check the battery consumption with a tester](#6-check-the-battery-consumption-with-a-tester)
+- [2. 大電力直流電圧変換](#2-大電力直流電圧変換)
+- [3. 電界数値計算](#3-電界数値計算)
+- [4. ヘリウム液化](#4-ヘリウム液化)
+- [5. 高圧IGBT直列接続](#5-高圧igbt直列接続)
+- [6. テスタを使ったバッテリチェック](#6-テスタを使ったバッテリチェック)
 - [7. Markdown to PDF](#7-markdown-to-pdf)
-- [8. electric circuit](#8-electric-circuit)
+- [8. 2相3相交流](#8-2相3相交流)
 - [9. WSL](#9-wsl)
 - [10. Design Pattern](#10-design-pattern)
 - [11. Memo](#11-memo)
@@ -185,16 +185,16 @@ EOF
   - $\frac{d^2 v_x}{dt^2} = -\omega_c^2 v_x$
   - $\frac{d^2 v_y}{dt^2} = -\omega_c^2 v_y$
 
-## 2. HVDC Transmission
+## 2. 大電力直流電圧変換
 
 設備構成別
 
 |     | Classification                   | Uses                                 |
 | --- | -------------------------------- | ------------------------------------ |
 | 1   | Cable Link                       | 離島供給・海峡横断・国際連系         |
-| 2   | FC - Frequency Converter         |
-| 3   | BTB - Asynchronous Link          |
-| 4   | Long distance / Bulk power trans |
+| 2   | FC - Frequency Converter         |                                      |
+| 3   | BTB - Asynchronous Link          |                                      |
+| 4   | Long distance / Bulk power trans |                                      |
 | 5   | Interconnector                   | 緊急時応援・周波数調整               |
 | 6   | RES connectio                    | 洋上風力等再生可能エネルギー送電     |
 | 7   | Multi-Terminal: LCC              | 長距離電源送電・中間地点への電力供給 |
@@ -210,13 +210,13 @@ EOF
 | 4   | 自励磁 | 2- / 3-Level    | 弱小系統連系                           |
 | 5   | 自励磁 | MMC             | 弱小系統連系・洋上風力・中規模直流設備 |
 | 6   | 他励磁 | 電源端: 他励磁  | 大規模電源送電の需要側の相互作用       |
-|     | 自励磁 | 受電端: 自励磁  |
+|     | 自励磁 | 受電端: 自励磁  |                                        |
 
 - ETT Electrically Triggered Thyristor
 - LTT Light Triggered Thyristor
 - MMC Modular Multi-Level Converter
 
-## 3. Numerical electric field calculation
+## 3. 電界数値計算
 
 - Finite Difference method 差分法
   - 領域を格子で分割しラプラスの式を差分の式に置き換えて
@@ -279,7 +279,7 @@ $$ X_e = \frac{\epsilon}{8 \delta} ((b_i \phi_i + b_j \phi_j + b_m \phi_m)^2 + (
 
 - Charge Simulation method CSM 電荷重畳法
 
-## 4. Liquefaction of helium
+## 4. ヘリウム液化
 
 ヘリウムの液化に用いられる冷却方法
 真空中に急激にヘリウムを押し込み、分子が広がるときに分子間力に引かれて押し込まれ気体分子の速度が減少する。
@@ -293,7 +293,7 @@ Joule-Thomson effect
 Helium has a particularly low critical point of 5.2K.
 Once liquid is formed, pump down the gas and reduce the pressure. When the pressure drops, the liquid evaporates, absorbing the heat of evaporation from the surroundings to lower the temperature.
 
-## 5. High-voltage IGBT multi-series technology
+## 5. 高圧IGBT直列接続
 
 - <https://www.fujielectric.co.jp/about/company/jihou_2002/pdf/75-08/07.pdf>
 
@@ -317,7 +317,7 @@ Suppressing device voltage imbalance is the biggest challenge when connecting IG
 
 The gate lines of the IGBTs connected in series are magnetically coupled by a core (hereinafter, referred to as a gate balance core) to balance the timing of the gate current flowing during switching. As a result, element voltage sharing can be equalized.
 
-## 6. Check the battery consumption with a tester
+## 6. テスタを使ったバッテリチェック
 
 電池に負荷抵抗をつないで調べる。
 電池が実際に使われている状態を再現して電流が流れている時の、電池の端子電圧を測定する。
@@ -362,19 +362,12 @@ Default template.html
 </html>
 ```
 
-## 8. electric circuit
+## 8. 2相3相交流
 
-トランジスタ技術　2021.07
-
-- 抵抗
-  - 抵抗ではすべての電力が消費されている
-  - エネルギーは瞬時に熱に変換される
-- コンデンサ
-  - コンデンサには電圧の形でエネルギーが蓄積される
-  - Ws = 1/2CV^2
-  - I=ΔVC
-  - コンデンサに流れる電流は、電圧の変動とキャパシタによって決まる
-- コイル
+- 3相交流(RST)を2相交流(RS)に変換する
+  - RSTの3本のケーブルのうち、2本だけを繋ぐ(単相き電方式)
+  - 3相の電流バランスを崩しやすくなる
+  - スコット結線・変形ウッドブリッジ結線・ルーフデルタ結線の変圧器を使う
 
 ## 9. WSL
 
