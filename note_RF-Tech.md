@@ -2,24 +2,7 @@
 title: RF Tech
 ---
 
-- [1. RF Device](#1-rf-device)
-- [2. Waveguide](#2-waveguide)
-  - [2.1. Rectanguler Waveguide](#21-rectanguler-waveguide)
-  - [2.2. Circuler Waveguide](#22-circuler-waveguide)
-  - [2.3. Corrugated Circuler Waveguide](#23-corrugated-circuler-waveguide)
-  - [2.4. Coaxial Waveguide](#24-coaxial-waveguide)
-- [3. Optics](#3-optics)
-  - [3.1. Gaussian Optics](#31-gaussian-optics)
-- [4. MoM](#4-mom)
-  - [4.1. Circularly polarized antenna](#41-circularly-polarized-antenna)
-  - [4.2. Irregular Waveguide](#42-irregular-waveguide)
-- [5. 光・波動のための有限要素法の基礎](#5-光波動のための有限要素法の基礎)
-- [6. 電磁現象の逆問題](#6-電磁現象の逆問題)
-- [7. 三極管制御](#7-三極管制御)
-- [8. GTD Geometrical Theory of Diffraction](#8-gtd-geometrical-theory-of-diffraction)
-- [9. Directive Coupler](#9-directive-coupler)
-- [10. Frequency Band](#10-frequency-band)
-- [11. Micro Wave Band](#11-micro-wave-band)
+## 1. Eq
 
 Dielectric constant of lossy medium
 $$ \epsilon_r = \epsilon_r^{\prime} - j\epsilon_r^{\prime\prime} $$
@@ -157,7 +140,7 @@ Dierectric
 | Distrilled Water |            80 |         4.0E-2 |
 |    Sea Water     |            81 |           4.62 |
 
-## 1. RF Device
+## 2. RF Device
 
 - ミリ波回路デバイス
 - 周波数変換器
@@ -199,9 +182,24 @@ Dierectric
   - Frequnecy Modulation 発振器の周波数変調
     - Digital Control Oscillator デジタル制御
 
-## 2. Waveguide
+### Spectrum Analyser / FFT
 
-### 2.1. Rectanguler Waveguide
+- 基本周波数1MHz, Vpp: 787.3mV -> スペアナで観測すると基本波のレベルが4dBm
+  - スペアナのインピーダンス: 50Ω
+
+10 * log10 ( (0.5/sqrt(2))^2 / 50 / 0.001 ) = 3.979
+
+- FFTで周波数分析すると、基本波レベル0.5
+
+peak_level = 2/n*pi * A
+A: Vpp
+n: 高調波の次数
+
+peak_level = sqrt (2 * (1 - cos(2*pi*duty*n)) ) /n*pi * A
+
+## 3. Waveguide
+
+### 3.1. Rectanguler Waveguide
 
 <https://www.everythingrf.com/tech-resources/waveguides-sizes>
 ![waveguide](./img/waveguide.jpg)
@@ -219,7 +217,7 @@ Dierectric
   - EIA - Electronic Industries Alliance
   - RCSC - Radio Components Standardization Committee
 
-### 2.2. Circuler Waveguide
+### 3.2. Circuler Waveguide
 
 - [waveguide](https://www.qwed.eu/CircularWaveguides.pdf)
 - Cutoff
@@ -233,9 +231,9 @@ Dierectric
 - $TM_{01}$ mode
   - $$ f_{c, TM_{0, 1}} = \frac{c}{2 \pi} \beta_{c, TM_{0, 1}} = \frac{c}{2 \pi} \frac{\chi_{0, 1}}{a}$$
 
-### 2.3. Corrugated Circuler Waveguide
+### 3.3. Corrugated Circuler Waveguide
 
-### 2.4. Coaxial Waveguide
+### 3.4. Coaxial Waveguide
 
 - WG Mode
   - Eigenmodes: $e_{mn}$.
@@ -282,7 +280,7 @@ Dierectric
   - TEM
     - $$ e^{TEM} = - \hat{\rho} \frac{1}{\rho\sqrt{2\pi \ln(c)}}$$
 
-## 3. Optics
+## 4. Optics
 
 - Field Expressions for the Electric and Magnetic short dipoles
 - well known (e.g. [Stratton, 1941] or [Hansen, 1988].
@@ -304,9 +302,9 @@ Dierectric
   - $$ b = \frac{20 \log_{10}((1+\cos\theta)/2) - A}{20k(1-\sin\theta)\log_{10}e} $$
   - $$ A = 20 \log_{10}((1+\cos\theta)/2) - 20bk(1-\sin\theta)\log_{10}e$$
 
-### 3.1. Gaussian Optics
+### 4.1. Gaussian Optics
 
-## 4. MoM
+## 5. MoM
 
 - The integral equation used for PEC objects is known
   - as the Mixed-Potential Electric Field Integral Equation (EFIE) formulation.
@@ -411,7 +409,7 @@ Dierectric
         - good choise is Euclidean norm of each basis function
       - Property of Expansion
 
-### 4.1. Circularly polarized antenna
+### 5.1. Circularly polarized antenna
 
 TE Mode: The electric field is perpendicular to the propagation direction, and there is no electric field component in the propagation direction.
 In the xz-plane, the composition of $H_x$ and $H_y$ is oblique with respect to the z-axis, so the Poynting Vector is oblique with respect to the z-axis. The propagating wave travels while repeating reflection on the wall surface of the waveguide.
@@ -473,7 +471,7 @@ $$ AR = \sqrt{\frac{|E_x|^2 \cos^2(\tau) + |E_x||E_y| \sin(2\tau)\cos(\delta) + 
 AR may be displayed in db. $AR<3Db$ is often circularly polarized, but AR is closely related to the cross-polarization discrimination XPD, which indicates the magnitude of the difference between the main polarization and cross-polarization.
 The evaluation value of AR should be determined taking into account the effect of polarization loss between the transmitting and receiving antennas.
 
-### 4.2. Irregular Waveguide
+### 5.2. Irregular Waveguide
 
 Gyro-K, Opti-K, Gyro-KL
 
@@ -518,7 +516,7 @@ $$ \rm r(\rho, \phi, s) = \bm R(s) + \rho r_b(\phi, s) \{ \bm n(s)\cos(\phi) + \
 - $\bm R(s)$ - equation of waveguide axis in Certesian coordinate
 - $n(s), b(s)$ - unit vectors of main normal and binormal axis of waveguide
 
-## 5. 光・波動のための有限要素法の基礎
+## 6. 光・波動のための有限要素法の基礎
 
 - 積分計算(1次要素・2次要素)
 
@@ -563,7 +561,7 @@ $$ \rm r(\rho, \phi, s) = \bm R(s) + \rho r_b(\phi, s) \{ \bm n(s)\cos(\phi) + \
   - Ez, Hzはそれぞれ、導波路伝搬方向の電界・磁界成分
   - Et, Htはそれぞれ、伝搬方向に垂直な断面内の電界・磁界成分(横電界・横磁界)
 
-## 6. 電磁現象の逆問題
+## 7. 電磁現象の逆問題
 
 - 渦電流探傷法による欠陥形状同定
   - 渦電流探傷試験 ECT
@@ -575,7 +573,7 @@ $$ \rm r(\rho, \phi, s) = \bm R(s) + \rho r_b(\phi, s) \{ \bm n(s)\cos(\phi) + \
 - マイクロECT 確率論的最適化法による導電率摂動分布逆計算
 - 核融合装置磁場の最適形状決定問題
 
-## 7. 三極管制御
+## 8. 三極管制御
 
 ![pic](img/Triode.png)
 
@@ -599,7 +597,7 @@ $$ \rm r(\rho, \phi, s) = \bm R(s) + \rho r_b(\phi, s) \{ \bm n(s)\cos(\phi) + \
   - 格子電流の流れる回路を形成
   - 入力抵抗くを高く保ったままにするため高い格子抵抗を加える
 
-## 8. GTD Geometrical Theory of Diffraction
+## 9. GTD Geometrical Theory of Diffraction
 
 - 回折波を励振する入射・表面反射が幾何学的な散乱体の形状により作られる影境界(Shadown Boundary)の近くで界が発散する
 - 回折界のスペクトル積分表示において
@@ -617,7 +615,7 @@ $$ \rm r(\rho, \phi, s) = \bm R(s) + \rho r_b(\phi, s) \{ \bm n(s)\cos(\phi) + \
     - 溝の開口が波長に比べて大きいとき
     - 溝内の底部に向かって並行平板導波管モードあるいは開放型の共振器モードが励振する
 
-## 9. Directive Coupler
+## 10. Directive Coupler
 
 高周波信号の分離・融合・結合を行う。
 
@@ -628,7 +626,7 @@ $$ \rm r(\rho, \phi, s) = \bm R(s) + \rho r_b(\phi, s) \{ \bm n(s)\cos(\phi) + \
 
 重要な特性の一つは、入射波と反射波にどの程度分離できるかどうかにある。
 
-## 10. Frequency Band
+## 11. Frequency Band
 
 Frequency Band
 | Name |           Mean |          freq band |               日本語 |
@@ -643,7 +641,7 @@ Frequency Band
 | EHF  | Extremely High |   30.0 ~ 300.0 GHz |               ミリ波 |
 |      |                | 300.0 ~ 3000.0 GHz |           サブミリ波 |
 
-## 11. Micro Wave Band
+## 12. Micro Wave Band
 
 IEEE-Band
 | -Band     |          freq |
